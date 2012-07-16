@@ -1,0 +1,28 @@
+#leftcolumnwrap
+  #leftcolumn
+    = render "accordion"
+.intro
+  %h2.content
+    = @meeting.title
+  %p
+    %b Date:
+    = @meeting.meetingdate
+  %p
+    %b Started:
+    = @meeting.startTime
+  %p
+    %b Ended:
+    = @meeting.endTime
+  %p
+    %b Meeting discussion:
+    = link_to 'Read discussion', @meeting.logsurl, {:rel => 'shadowbox;width=1000;height=600;', :title => [@meeting.channel," - " ,@meeting.title]} 
+  %p
+    %b Meeting Minutes:
+    = link_to 'Read minutes', @meeting.murl, {:rel => 'shadowbox;width=1000;height=600;', :title => [@meeting.channel," - " ,@meeting.title]}
+  %p
+    %b Channel:
+    = @meeting.channel
+
+  = link_to 'Edit', edit_meeting_path(@meeting)
+  \|
+  = link_to 'Back', meetings_path

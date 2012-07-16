@@ -1,0 +1,15 @@
+= simple_form_for(@meeting) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :startTime
+    = f.input :endTime
+    = f.input :content
+    = f.input :logsurl
+    = f.input :url
+    = f.input :channel
+    = f.input :meetingyear
+    = f.input :meetingmonth
+  .form-actions
+    = f.button :submit

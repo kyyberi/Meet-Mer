@@ -1,0 +1,11 @@
+= simple_form_for(@package) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :package_name
+    = f.input :package_description
+    = f.input :package_version
+    = f.input :package_maintainer
+
+  .form-actions
+    = f.button :submit

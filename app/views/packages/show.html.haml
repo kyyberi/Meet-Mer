@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Package name:
+  = @package.package_name
+%p
+  %b Package description:
+  = @package.package_description
+%p
+  %b Package version:
+  = @package.package_version
+%p
+  %b Package maintainer:
+  = @package.package_maintainer
+
+= link_to 'Edit', edit_package_path(@package)
+\|
+= link_to 'Back', packages_path

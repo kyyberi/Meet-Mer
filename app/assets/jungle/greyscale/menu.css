@@ -1,0 +1,69 @@
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+#menu{
+	width:90%;
+	margin:25px auto;
+}
+#menu ul{
+	list-style:none;
+}
+#menu li{
+	display:block;
+	float:left;
+}
+#menu li a{
+	background:#979797 url(images/menu_bg.gif) repeat-x;
+	border:2px solid #939393;
+	margin:0 1px;
+	padding:15px 15px 15px 15px;
+	display:block;
+	float:left;
+	color:#fff;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	height: 50px;
+}
+#menu li a span{
+	color:#636363;
+	font-size:10px;
+	text-transform:lowercase;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight:normal;
+}
+#menu li a:hover{
+	background:#e46825 url(images/menu_hover.gif) repeat-x;
+	border:2px solid #939393;
+	text-decoration:none;
+}
+#menu li a:hover span{
+	color:#636363;
+}
+.current{
+	background:#bcbcbc url(images/menu_hover.gif) repeat-x;
+	border:2px solid #aeaeae;
+	margin:0 1px;
+	padding:15px 15px 15px 15px;
+	display:block;
+	float:left;
+	color:#fff;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	cursor:pointer;
+	font-weight:bold;
+	height: 50px;
+}
+.current span{
+	color:#636363;
+	font-size:10px;
+	text-transform:lowercase;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight:normal;
+}

@@ -1,0 +1,63 @@
+.container
+  %h2.acc_trigger
+    %a{:href=>"#"} Meetings info
+  .acc_container
+    .block
+      %ul.accordion
+        %li In #mer-meeting (irc.freenode.net)
+        %li using the MeetBot
+    .block
+      %h3 Details
+      %ul.accordion
+        %li 
+          Meeting count(all):
+          %span.value 
+            = @meetingstotal.count
+        %li 
+          Meeting count(this year):
+          %span.value
+            = @meetingsall.count
+  - (1..12).each do |i|
+    %h2.acc_trigger
+      %a{:href=>"#"} 
+        Meetings 
+        = @meetings[0].meetingyear
+        \/
+        = i
+        %span.count
+          (
+          - if i == 1
+            = @meetings1.count
+          - if i == 2
+            = @meetings2.count
+          - if i == 3 
+            = @meetings3.count
+          - if i == 4 
+            = @meetings4.count
+          - if i == 5 
+            = @meetings5.count
+          - if i == 6 
+            = @meetings6.count
+          - if i == 7 
+            = @meetings7.count
+          - if i == 8 
+            = @meetings8.count
+          - if i == 9 
+            = @meetings9.count
+          - if i == 10 
+            = @meetings10.count
+          - if i == 11 
+            = @meetings11.count
+          - if i == 12 
+            = @meetings12.count
+          ) 
+    .acc_container
+      .block
+        %ul.column
+          - @meetingsall.each do |item|
+            - if item.meetingmonth == i.to_s
+              %li
+                %div.date
+                  = item.meetingdate
+                  %div.title
+                    = link_to item.title, item

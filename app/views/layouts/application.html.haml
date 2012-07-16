@@ -1,0 +1,80 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    %title= content_for?(:title) ? yield(:title) : "Meet-Mer v. 0.0.1 by kyyberi"
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    = stylesheet_link_tag    "application", "accordion", "shadowbox", "shadowbox2", "menu", :media => "all"
+    = javascript_include_tag "application", "shadowbox"
+    = csrf_meta_tags 
+    = yield(:head)
+  :javascript
+    $(document).ready(function(){
+	
+    $('.acc_container').hide(); //Hide/close all containers
+    $('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+
+    $('.acc_trigger').click(function(){
+      if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+        $('.acc_trigger').removeClass('active').next().slideUp(); //Remove all .acc_trigger classes and slide up the immediate next container
+          $(this).toggleClass('active').next().slideDown(); //Add .acc_trigger class to clicked trigger and slide down the immediate next container
+        }
+        return false; //Prevent the browser jump to the link anchor
+      });
+
+    });
+  :javascript
+    Shadowbox.init({
+    });
+
+  %body
+    #wrapper
+      #headerwrap
+       
+        #slide-out
+          %div{:id => "subscribe", :class => "page-wrap"} 
+            - if signed_in?
+              .subscribe_sign_out 
+                = link_to "Sign out", destroy_user_session_path, :method => :delete
+            - else
+              .subscribesignin
+                %h3 
+                  Login
+                = form_tag user_session_path do
+                  = text_field_tag 'user[email]'
+                  %br
+                  = password_field_tag 'user[password]'
+                  %br
+                  = check_box_tag 'user[remember_me]'
+                  = label_tag 'user[remember_me]', 'Remember me'
+                  %br
+                  %button Sign in
+            
+            %a{:href=>"#", :class => "button"} 
+              
+      
+        #header
+
+          #navigationwrap
+            #logo
+            #dash
+            
+            #navigation 
+              = render_navigation
+      #contentliquid
+        #contentwrap
+              
+          #content
+            = yield
+      #footerwrap
+        #footer
+          %p This is the Footer
+          - if signed_in?
+            %li 
+              = link_to "Sign out", destroy_user_session_path, :method => :delete
+          - else
+            %li 
+              = link_to "Sign in", user_session_path, :method => :create

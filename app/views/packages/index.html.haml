@@ -1,0 +1,25 @@
+%h1 Listing packages
+
+%table
+  %tr
+    %th Package name
+    %th Package description
+    %th Package version
+    %th Package maintainer
+    %th
+    %th
+    %th
+
+  - @packages.each do |package|
+    %tr
+      %td= package.package_name
+      %td= package.package_description
+      %td= package.package_version
+      %td= package.package_maintainer
+      %td= link_to 'Show', package
+      %td= link_to 'Edit', edit_package_path(package)
+      %td= link_to 'Destroy', package, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Package', new_package_path

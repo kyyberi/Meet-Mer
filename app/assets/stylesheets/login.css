@@ -1,0 +1,89 @@
+
+.page-wrap {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	/* width: 935px;*/
+	width:1080px;
+}
+
+#subscribe{
+	position:relative;
+	line-height: .5px;
+	float:right;
+}
+
+#subscribe a.button{
+	background-image:url("home.png");
+	background-repeat:no-repeat;
+	background-position:right bottom; 
+	background-color:transparent;
+	bottom:-79px;
+	color:#FFFFFF;
+	display:block;
+	font-size:12px;
+	height:72px;
+	padding-top:0px;
+	margin-bottom:0px;
+	position:absolute;
+	right:0;
+	text-align:center;
+	text-decoration:none;
+	width:105px;
+	border:solid 0px #fff;
+	z-index:2000;
+	z-order:1000;
+	line-height: normal;
+}
+
+#slide-out:hover{
+	margin-top: 0px;
+}
+
+#slide-out {
+	-moz-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	background-color: #0978b2;
+	height: 123px;
+	color: #000;
+	position: relative;
+	margin-left:5px;
+	padding-top: 10px;
+	margin-top: -135px;
+	width:1090px;
+	border-bottom: dotted 1px #ccc;
+/*
+        -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px; border-bottom-right:10px; 
+        -webkit-border-bottom-left-radius: 10px; -webkit-border-bottom-right-radius: 10px; border-bottom-left:10px;
+*/
+}
+
+.clear {
+
+    clear: both;
+
+}
+
+#subscribe ul {
+	padding-top:30px;
+}
+
+#subscribe p.fill {
+	display:block;
+	height:20px;
+}
+
+#subscribe form input,button {
+	margin-top:10px;
+}
+
+#subscribe form input 7{
+	
+}
+
+#subscribe .subscribesignin {
+	float:right;
+	border:solid 1px #eee;
+}
