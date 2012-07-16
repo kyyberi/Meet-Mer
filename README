@@ -1,7 +1,8 @@
-Rails3 Bootstrap Devise Cancan
-========================
+===== Mer-Meet ==============
+Simple Rails app to view Mer -project content and community activity from one entrance. 
+
+App retrieves data from external sources and stores meta data in own database.  
+Data is loaded for viewing on need basis. For example meeting minutes and logs 
+are loaded when user asks. 
 
 
-________________________
-
-License
