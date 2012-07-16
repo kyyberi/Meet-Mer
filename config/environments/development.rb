@@ -27,8 +27,8 @@ Rails3BootstrapDeviseCancan::Application.configure do
     domain: "ossoil.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["jm60697@gmail.com"],
-    password: ENV["Zia5dekk"]
+    user_name: ENV[".com"],
+    password: ENV[""]
   }
 
 
