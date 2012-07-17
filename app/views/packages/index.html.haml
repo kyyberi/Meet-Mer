@@ -1,8 +1,11 @@
+
 #leftcolumnwrap
   #leftcolumn
     = render "meetings/accordion"
 .intro
-  %h2.content Mer core package listing
+  %h2.content 
+    Mer core package listing
+    
   %p In the below table you can find packages included in Mer core. Note that dependencies are not the same as packages. You can see the dependencies in separate view. 
    
   %p
@@ -10,19 +13,30 @@
     %b
       = @packages.count
     packages.
-    (Content last updated xx.xx.xxxx) 
-.intro
-  %h2.content Listing
+%div{:class=> "intro"}
+  %h2.content 
+    Listing
+    = @packagesbydates[0].updated_at
   %p Simple listing in alphabetical order.
-  %table.bordered
-    %thead
+  %p
+    %label{:for=>"search"}
+      %b 
+        Enter keyword to search
+    %input{:type=> "text", :id=>"search"}
+        
+   
+  %table{:class => "bordered", :id => "packagesData"}
+    %tbody
       %tr
-        %th Package name
-        %th Git path
-        %th Package version
+        %th{:class=> 'packagenro'} #
+        %th{:class=> 'packagename'} Package name
+        %th{:class=> 'packagegit'} Git path
+        %th{:class=> 'packageversion'} Package version
  
-    - @packages.each do |package|
-      %tr
+    - @packages.each_with_index do |package, index|
+      %tr{:class=> 'item'}
+        %td 
+          = index +1
         %td
           %b 
             = package.package_name

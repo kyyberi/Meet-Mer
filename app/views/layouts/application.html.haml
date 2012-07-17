@@ -29,6 +29,41 @@
   :javascript
     Shadowbox.init({
     });
+  :javascript
+    $(document).ready(function()
+      {
+        
+        $('#search').keyup(function()
+          {
+                
+            searchTable($(this).val());
+          });
+      });
+
+    function searchTable(inputVal)
+    {
+      var table = $('#packagesData');
+      table.find('tr.item').each(function(index, row)
+      
+      {
+        var allCells = $(row).find('td');
+        {
+          var found = false;
+          allCells.each(function(index, td)
+          {
+            var regExp = new RegExp(inputVal, 'i');
+            if(regExp.test($(td).text()))
+              {
+                found = true;
+                return false;
+              }
+          });
+          if(found == true)$(row).show();else $(row).hide();
+        }
+      });
+    }
+    
+
 
   %body
     #wrapper

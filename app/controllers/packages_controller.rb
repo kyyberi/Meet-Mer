@@ -2,8 +2,8 @@ class PackagesController < ApplicationController
   # GET /packages
   # GET /packages.json
   def index
-    @packages = Package.all
-
+    @packages = Package.find(:all, :order => 'package_name ASC')
+    @packagesbydates = Package.find(:all, :order => 'updated_at DESC') 
     @meetings = Meeting.find(:all, :order => 'meetingdate DESC', :limit => 10)
     @meetingsall = Meeting.find(:all, :order => 'meetingdate DESC')
     @meetingstotal = Meeting.find(:all)
