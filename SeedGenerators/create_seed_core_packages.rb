@@ -27,21 +27,18 @@ puts "  "
 def getPackageList(doc, path)
         doc.xpath('//package').each do |package|
 			puts  " {"
-                        print "   :name => \"" 
+                        print "   :package_name => \"" 
 			print package['name']
 			puts "\", "
-			print  "   :vrev => \""
+			print  "   :package_version => \""
 			print package['vrev']
 			puts "\", "
-			print  "   :git => \""
+			print  "   :package_git => \""
 			print package['git']
 			puts "\", "
-			print  "   :commit => \""
+			print  "   :package_commit => \""
 			print package['commit']
 			puts "\", "
-			print  "   :origin => \""
-			print path
-			puts "\""
 			puts "  }," 
         end
 	

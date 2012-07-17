@@ -3,19 +3,16 @@
 %table
   %tr
     %th Package name
-    %th Package description
+    %th Package git
     %th Package version
-    %th Package maintainer
-    %th
-    %th
-    %th
+    %th Package commit
 
   - @packages.each do |package|
     %tr
       %td= package.package_name
-      %td= package.package_description
+      %td= package.package_git
       %td= package.package_version
-      %td= package.package_maintainer
+      %td= package.package_commit
       %td= link_to 'Show', package
       %td= link_to 'Edit', edit_package_path(package)
       %td= link_to 'Destroy', package, :confirm => 'Are you sure?', :method => :delete
