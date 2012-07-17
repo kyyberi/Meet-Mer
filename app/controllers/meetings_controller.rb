@@ -36,7 +36,7 @@ class MeetingsController < ApplicationController
     @meetingsall = Meeting.find(:all, :order => 'meetingdate DESC')
     @meeting = Meeting.find(params[:id])
     @meetingstotal = Meeting.find(:all)
-
+   
     @meetings1 = Meeting.find(:all, :conditions => {:meetingmonth => "1", :meetingyear => Time.now.year})
     @meetings2 = Meeting.find(:all, :conditions => {:meetingmonth => "2", :meetingyear => Time.now.year})
     @meetings3 = Meeting.find(:all, :conditions => {:meetingmonth => "3", :meetingyear => Time.now.year})
@@ -49,7 +49,6 @@ class MeetingsController < ApplicationController
     @meetings10 = Meeting.find(:all, :conditions => {:meetingmonth => "10", :meetingyear => Time.now.year})
     @meetings11 = Meeting.find(:all, :conditions => {:meetingmonth => "11", :meetingyear => Time.now.year})
     @meetings12 = Meeting.find(:all, :conditions => {:meetingmonth => "12", :meetingyear => Time.now.year})
-
 
 
     respond_to do |format|

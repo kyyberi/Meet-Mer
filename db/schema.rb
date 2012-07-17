@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120713215117) do
+ActiveRecord::Schema.define(:version => 20120713215118) do
 
   create_table "meetings", :force => true do |t|
     t.string   "title"
@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(:version => 20120713215117) do
 
   create_table "packages", :force => true do |t|
     t.string   "package_name"
-    t.text     "package_description"
+    t.string   "package_git"
     t.string   "package_version"
-    t.string   "package_maintainer"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.string   "package_commit"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "roles", :force => true do |t|

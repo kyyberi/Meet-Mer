@@ -1,7 +1,0 @@
-TODO:
-- add background job feature
-- add background job for updating meetings details
-- create functionality to add Mer package list & automatic update method for that
-- create visualized browsable map of Mer components and dependencies.
-- add gategories to meetings (QA Meeting, Advisory Board, Bug Triage, Nemo Steering Group, Release Management)
-- Make IRC meeting times local in browser + in parenthesis UTC time just to be sure. 

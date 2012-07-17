@@ -5,3 +5,7 @@ TODO:
 - create visualized browsable map of Mer components and dependencies.
 - add gategories to meetings (QA Meeting, Advisory Board, Bug Triage, Nemo Steering Group, Release Management)
 - Make IRC meeting times local in browser + in parenthesis UTC time just to be sure. 
+- users needs tying to ldap - there's code in OBS to do that (some of which I (lbt) hammered to fit)
+
+FIXME:
+

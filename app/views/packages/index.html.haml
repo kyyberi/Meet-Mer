@@ -1,21 +1,33 @@
-%h1 Listing packages
-
-%table
-  %tr
-    %th Package name
-    %th Package git
-    %th Package version
-    %th Package commit
-
-  - @packages.each do |package|
-    %tr
-      %td= package.package_name
-      %td= package.package_git
-      %td= package.package_version
-      %td= package.package_commit
-      %td= link_to 'Show', package
-      %td= link_to 'Edit', edit_package_path(package)
-      %td= link_to 'Destroy', package, :confirm => 'Are you sure?', :method => :delete
+#leftcolumnwrap
+  #leftcolumn
+    = render "meetings/accordion"
+.intro
+  %h2.content Mer core package listing
+  %p In the below table you can find packages included in Mer core. Note that dependencies are not the same as packages. You can see the dependencies in separate view. 
+   
+  %p
+    Mer core contains
+    %b
+      = @packages.count
+    packages.
+    (Content last updated xx.xx.xxxx) 
+.intro
+  %h2.content Listing
+  %p Simple listing in alphabetical order.
+  %table.bordered
+    %thead
+      %tr
+        %th Package name
+        %th Git path
+        %th Package version
+ 
+    - @packages.each do |package|
+      %tr
+        %td
+          %b 
+            = package.package_name
+        %td= package.package_git
+        %td= package.package_version
 
 %br
 
