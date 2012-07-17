@@ -32,19 +32,24 @@
   :javascript
     $(document).ready(function()
       {
+        $('#jsPageSearch').show();      
+      });
+      
+  :javascript
+    $(document).ready(function()
+      {
         
         $('#search').keyup(function()
           {
-                
             searchTable($(this).val());
           });
       });
 
     function searchTable(inputVal)
     {
+      
       var table = $('#packagesData');
       table.find('tr.item').each(function(index, row)
-      
       {
         var allCells = $(row).find('td');
         {
@@ -61,6 +66,7 @@
           if(found == true)$(row).show();else $(row).hide();
         }
       });
+    	
     }
     
 

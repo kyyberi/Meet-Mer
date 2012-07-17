@@ -18,12 +18,13 @@
     Listing
     = @packagesbydates[0].updated_at
   %p Simple listing in alphabetical order.
-  %p
+  %p{:id=>"jsPageSearch"}
     %label{:for=>"search"}
       %b 
         Enter keyword to search
     %input{:type=> "text", :id=>"search"}
-        
+    %span{:id=>"loading"}
+      (javascript based - could be slow)        
    
   %table{:class => "bordered", :id => "packagesData"}
     %tbody

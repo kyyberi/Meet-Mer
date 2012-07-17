@@ -115,14 +115,19 @@ td.title {
 /* ##### Package listing table ##### */
 
 th.packagename {
-	width:
+	width:30%;
 }
 
 th.packagenro {
+	width:3%;
 }
 th.packageversion {
-        width:
+        width:10%;
 }
 th.packagegit {
+
 }
 
+#jsPageSearch {
+	display:none;
+}
