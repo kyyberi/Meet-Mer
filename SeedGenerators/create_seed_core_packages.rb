@@ -2,49 +2,32 @@
 require 'nokogiri'
 require 'open-uri'
 
-path = "http://gitweb.merproject.org/gitweb?p=mer/project-core.git;a=blob_plain;f=packages.xml;hb=HEAD"
+path = "http://releases.merproject.org/~carsten/mer-core-i586-connectivity-xorg-basic-qmlviewer.packages-proposed-deps.txt"
 
 # Get a Nokogiri::HTML:Document for the page we’re interested in...
-doc = Nokogiri::XML(open(path))
-puts "Package.create(["
 puts "  "
 
 
 ####
 # Search for nodes by xpath
 #  
-# we need for each: 
-# { 
-#    :commit => "xxx",
-#    :name => "xxx",
-#    :origin =>"URL == path above",
-#    :git => "xxx",
-#    :vrev => "xxx",
-# }, 
-#
-#
 
-def getPackageList(doc, path)
-        doc.xpath('//package').each do |package|
-			puts  " {"
-                        print "   :package_name => \"" 
-			print package['name']
-			puts "\", "
-			print  "   :package_version => \""
-			print package['vrev']
-			puts "\", "
-			print  "   :package_git => \""
-			print package['git']
-			puts "\", "
-			print  "   :package_commit => \""
-			print package['commit']
-			puts "\", "
-			puts "  }," 
-        end
-	
-puts "]) "
+def getDepList(path)
+   
+   web_contents  = open(path) { |f| 
+ 	f.read 
+   }
+   readLines(web_contents)
+
 end
 
-
-
-getPackageList(doc, path)
+def readLines(ifile) 
+ 	ifile.each_line do |line|
+	mys = "#{line}" 		
+		@arr = line.split(":")
+		puts @arr[0]
+		puts @arr[1]
+		puts @arr[2]
+	end
+end
+getDepList(path)
