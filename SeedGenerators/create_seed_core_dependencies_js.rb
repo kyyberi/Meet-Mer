@@ -82,6 +82,7 @@ end
 
 
 def createGroups (uniqArr, mainArr, tosArr, typesArr)
+	count = 0
 	puts "var json = [{"
 	uniqArr.each do |item|
         # we need to get
@@ -92,8 +93,11 @@ def createGroups (uniqArr, mainArr, tosArr, typesArr)
         #    	"    some other key": "some other value"
         #	"},"
 	puts ""
-	
-	print "{ \"id\": \""
+	if count != 0
+	  print "{"
+	end
+        count += 1
+	print " \"id\": \""
 	print item
 	puts "\","
 	print " \"name\": \""

@@ -1,0 +1,94 @@
+/Multimedia/ALSA/alsa-lib:copyright:meego
+/Multimedia/ALSA/alsa-lib:description:blah
+/Multimedia/ALSA/alsa-lib:/Essentials/Base Essentials/coreutils:package
+/Multimedia/ALSA/alsa-lib:/Essentials/Base Essentials/glibc:feature
+/Multimedia/ALSA/alsa-lib:/Essentials/Base Essentials/glibc:file
+/Multimedia/ALSA/alsa-lib:/Essentials/Base Essentials/libgcc:feature
+/Multimedia/ALSA/alsa-lib:license:LGPLv2+
+/Multimedia/ALSA/alsa-lib:/Multimedia/ALSA/alsa-lib:feature
+/Multimedia/Codecs/flac:copyright:meego
+/Multimedia/Codecs/flac:description:blah
+/Multimedia/Codecs/flac:/Essentials/Base Essentials/glibc:feature
+/Multimedia/Codecs/flac:/Essentials/Base Essentials/glibc:file
+/Multimedia/Codecs/flac:/Essentials/Base Essentials/libgcc:feature
+/Multimedia/Codecs/flac:/Essentials/Base Essentials/libstdc++:feature
+/Multimedia/Codecs/flac:license:BSD and GPLv2+
+/Multimedia/Codecs/flac:/Multimedia/Codecs/flac:feature
+/Multimedia/Codecs/flac:/Multimedia/Codecs/libogg:feature
+/Multimedia/Codecs/libogg:copyright:meego
+/Multimedia/Codecs/libogg:description:blah
+/Multimedia/Codecs/libogg:/Essentials/Base Essentials/glibc:feature
+/Multimedia/Codecs/libogg:/Essentials/Base Essentials/glibc:file
+/Multimedia/Codecs/libogg:license:BSD
+/Multimedia/Codecs/libsndfile:copyright:meego
+/Multimedia/Codecs/libsndfile:description:blah
+/Multimedia/Codecs/libsndfile:license:LGPLv2+
+/Multimedia/Codecs/libvorbis:copyright:meego
+/Multimedia/Codecs/libvorbis:description:blah
+/Multimedia/Codecs/libvorbis:/Essentials/Base Essentials/glibc:feature
+/Multimedia/Codecs/libvorbis:/Essentials/Base Essentials/glibc:file
+/Multimedia/Codecs/libvorbis:license:BSD
+/Multimedia/Codecs/libvorbis:/Multimedia/Codecs/libogg:feature
+/Multimedia/Codecs/libvorbis:/Multimedia/Codecs/libvorbis:feature
+/Multimedia/Codecs/speex:copyright:meego
+/Multimedia/Codecs/speex:description:blah
+/Multimedia/Codecs/speex:/Essentials/Base Essentials/glibc:feature
+/Multimedia/Codecs/speex:/Essentials/Base Essentials/glibc:file
+/Multimedia/Codecs/speex:/Essentials/Base Essentials/libgcc:feature
+/Multimedia/Codecs/speex:license:BSD
+/Multimedia/PulseAudio/libasyncns:copyright:meego
+/Multimedia/PulseAudio/libasyncns:description:blah
+/Multimedia/PulseAudio/libasyncns:/Essentials/Base Essentials/glibc:feature
+/Multimedia/PulseAudio/libasyncns:/Essentials/Base Essentials/glibc:file
+/Multimedia/PulseAudio/libasyncns:license:LGPLv2+
+/Multimedia/PulseAudio/orc:copyright:meego
+/Multimedia/PulseAudio/orc:description:blah
+/Multimedia/PulseAudio/orc:/Essentials/Base Essentials/glibc:feature
+/Multimedia/PulseAudio/orc:/Essentials/Base Essentials/glibc:file
+/Multimedia/PulseAudio/orc:license:BSD
+/Multimedia/PulseAudio/orc:/Multimedia/PulseAudio/orc:feature
+/Multimedia/PulseAudio/pulseaudio:copyright:meego
+/Multimedia/PulseAudio/pulseaudio:description:blah
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/bash:file
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/file:feature
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/gconf:feature
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/glib2:feature
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/glibc:feature
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/glibc:file
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/libtool-ltdl:feature
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/udev:feature
+/Multimedia/PulseAudio/pulseaudio:/Essentials/Base Essentials/udev:package
+/Multimedia/PulseAudio/pulseaudio:/Essentials/D-Bus/dbus-libs:feature
+/Multimedia/PulseAudio/pulseaudio:/Graphics/X11/libICE:feature
+/Multimedia/PulseAudio/pulseaudio:/Graphics/X11/libSM:feature
+/Multimedia/PulseAudio/pulseaudio:/Graphics/X11/libX11:feature
+/Multimedia/PulseAudio/pulseaudio:/Graphics/X11/libxcb:feature
+/Multimedia/PulseAudio/pulseaudio:/Graphics/X11/libXtst:feature
+/Multimedia/PulseAudio/pulseaudio:/Graphics/X11/xcb-util:feature
+/Multimedia/PulseAudio/pulseaudio:/Graphics/X11/xcb-util:package
+/Multimedia/PulseAudio/pulseaudio:license:LGPLv2+
+/Multimedia/PulseAudio/pulseaudio-module-x11:copyright:meego
+/Multimedia/PulseAudio/pulseaudio-module-x11:description:blah
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Essentials/Base Essentials/bash:file
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Essentials/Base Essentials/file:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Essentials/Base Essentials/glibc:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Essentials/Base Essentials/libtool-ltdl:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Essentials/Base Essentials/sed:file
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Essentials/D-Bus/dbus-libs:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Graphics/X11/libICE:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Graphics/X11/libSM:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Graphics/X11/libX11:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Graphics/X11/libxcb:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Graphics/X11/libXtst:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Graphics/X11/xcb-util:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:license:LGPLv2+
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Multimedia/Codecs/speex:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Multimedia/PulseAudio/libasyncns:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Multimedia/PulseAudio/orc:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Multimedia/PulseAudio/pulseaudio:feature
+/Multimedia/PulseAudio/pulseaudio-module-x11:/Multimedia/PulseAudio/pulseaudio:package
+/Multimedia/PulseAudio/pulseaudio:/Multimedia/ALSA/alsa-lib:feature
+/Multimedia/PulseAudio/pulseaudio:/Multimedia/Codecs/speex:feature
+/Multimedia/PulseAudio/pulseaudio:/Multimedia/PulseAudio/libasyncns:feature
+/Multimedia/PulseAudio/pulseaudio:/Multimedia/PulseAudio/orc:feature
+/Multimedia/PulseAudio/pulseaudio:/Multimedia/PulseAudio/pulseaudio:feature
