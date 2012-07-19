@@ -4,7 +4,8 @@ class MeetingsController < ApplicationController
 
   def index
   #    @meetings = Meeting.all
-    
+
+    Rails.logger.info("MEETMER: meetings_controller.rb")    
     @meetings = Meeting.find(:all, :order => 'meetingdate DESC', :limit => 10) 
     @meetingsall = Meeting.find(:all, :order => 'meetingdate DESC', :conditions => {:meetingyear => Time.now.year})
     @meetingstotal = Meeting.find(:all)

@@ -1,5 +1,7 @@
 class CreateMeetings < ActiveRecord::Migration
-  def change
+
+drop_table :meetings
+  def update
     create_table :meetings do |t|
       t.string :title
       t.string :startTime
@@ -14,5 +16,5 @@ class CreateMeetings < ActiveRecord::Migration
       t.timestamps
     end
   end
-end
 
+end

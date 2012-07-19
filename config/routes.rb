@@ -1,4 +1,6 @@
 Rails3BootstrapDeviseCancan::Application.routes.draw do
+  resources :meeting2s
+
   resources :packages
 
   resources :meetings

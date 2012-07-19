@@ -1,4 +1,5 @@
 class CreatePackages < ActiveRecord::Migration
+
   def change
     create_table :packages do |t|
       t.string :package_name
@@ -8,5 +9,4 @@ class CreatePackages < ActiveRecord::Migration
       t.timestamps
     end
   end
-
 end
