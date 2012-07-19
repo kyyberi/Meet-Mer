@@ -83,6 +83,8 @@ end
 
 def createGroups (uniqArr, mainArr, tosArr, typesArr)
 	count = 0
+
+	#FIXME: process last differently to avoid "}," in the end.
 	puts "var json = [{"
 	uniqArr.each do |item|
         # we need to get
