@@ -114,10 +114,12 @@ def createGroups (uniqArr, mainArr, tosArr, typesArr)
 	# go through the mainArr[pos x] and seek each uniqArr and take equivalent[pos x] from tosArr and typesArr
 		counter = 0
 		foundArr = Array.new
+		depArr = Array.new
 		mainArr.each do |adja|
 			if item == adja
 				# store found values and pos to 2d array and later iterate that array
 				foundArr.push(tosArr[counter])
+				depArr.push(typesArr[counter])
 			end
 			counter += 1
 
@@ -133,6 +135,9 @@ def createGroups (uniqArr, mainArr, tosArr, typesArr)
 				print "\","
 				puts "  \"data\": {"
 				puts "       \"weight\": 1" 	
+				puts "       \"relation\": \""
+				print foundOne
+				print "\","
 				puts "    }"
 				puts " }, "
 				
