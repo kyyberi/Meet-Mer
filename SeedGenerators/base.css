@@ -14,6 +14,7 @@ input, select {
 table {
     margin-top:-10px;
     margin-left:7px;
+	background-color:#fff;
 }
 
 h4 {
@@ -21,6 +22,7 @@ h4 {
     text-decoration:none;
     font-weight:normal;
     color:#23A4FF;
+	background-color:#fff;
 }
 
 a {
@@ -28,10 +30,11 @@ a {
 }
 
 #container {
-    width: 1500px;
+    width: 1400px;
     height: 900px;
-    margin:0 auto;
+    float:left;
     position:relative;
+    background-color:#fff;
 }
 
 #left-container, 
@@ -40,9 +43,11 @@ a {
     height:600px;
     position:absolute;
     top:0;
+	background-color:#fff;
 }
 #center-container {
-	height:900px;
+	height:600px;
+background-color:#fff;	
 }
 
 #left-container, #right-container {
@@ -51,23 +56,23 @@ a {
     text-align: left;
     overflow: auto;
     background-color:#fff;
-    background-repeat:no-repeat;
-    border-bottom:1px solid #ddd;
+    
+    border-bottom:0px solid #ddd;
 }
 
 #left-container {
     left:0;
-    background-image:url('col2.png');
+    background-color:#fff;
     background-position:center right;
-    border-left:1px solid #ddd;
+    border-left:0px solid #ddd;
     
 }
 
 #right-container {
-    right:0;
-    background-image:url('col1.png');
+    left:1000px;
+    background-color:#fff;
     background-position:center left;
-    border-right:1px solid #ddd;
+    border-right:px solid #ddd;
 }
 
 #right-container h4{
@@ -75,7 +80,7 @@ a {
 }
 
 #center-container {
-    width:1200px;
+    width:1000px;
     left:200px;
     background-color:#1a1a1a;
     color:#ccc;
@@ -91,28 +96,36 @@ a {
     margin:7px;
 }
 
+#inner-details h4{
+
+   font-size:2em;
+}
 #log {
     position:absolute;
     top:10px;
     font-size:1.0em;
     font-weight:bold;
     color:#23A4FF;
+	background-color:#fff;
 }
 
 
 #infovis {
     position:relative;
     width:1200px;
-    height:900px;
-    margin:auto;
+    height:800px;
+    /* margin:auto; */
     overflow:hidden;
+    background-color:#fff;
+    color:#000;
+	border:solid 1px #eee;
 }
 
 /*TOOLTIPS*/
 .tip {
     color: #111;
     width: 139px;
-    background-color: white;
+    background-color: #fff;
     border:1px solid #ccc;
     -moz-box-shadow:#555 2px 2px 8px;
     -webkit-box-shadow:#555 2px 2px 8px;

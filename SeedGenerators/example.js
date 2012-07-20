@@ -34,7 +34,7 @@ function init(){
     //In this case we use "$type" and "$dim" properties to override
     //the type of the node to be plotted and its dimension.
 
-  
+    
   
 var json = [{
 
@@ -9113,8 +9113,10 @@ var json = [{
        "weight": 1
     }
  }]
-
 }];
+
+
+
     //end
     //init Hypertree
     var ht = new $jit.Hypertree({

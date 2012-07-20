@@ -1,5 +1,5 @@
 ### Creates seed for Mer core package listing ###
-require 'nokogiri'
+#require 'nokogiri'
 require 'open-uri'
 
 path = "http://releases.merproject.org/~carsten/mer-core-i586-connectivity-xorg-basic-qmlviewer.packages-proposed-deps.txt"
@@ -126,21 +126,23 @@ def createGroups (uniqArr, mainArr, tosArr, typesArr)
 		end
 		#iterate found values and take equivalent index from tosArr
 		# make unique first
+ 		itemcount = 0
                 foundArr = foundArr.uniq
 		last = foundArr.pop
 		foundArr.each do |foundOne|
+
 				puts " {"
 				print "  \"nodeTo\": \""
 				print foundOne
 				print "\","
 				puts "  \"data\": {"
 				puts "       \"weight\": 1" 	
-				puts "       \"relation\": \""
-				print foundOne
-				print "\","
+#				puts "       \"relation\": \""
+#				print depArr[itemcount]
+#				print "\""
 				puts "    }"
 				puts " }, "
-				
+				itemcount += 1
 		end
 		# process the last
 				puts " {"
@@ -148,13 +150,20 @@ def createGroups (uniqArr, mainArr, tosArr, typesArr)
 				print last
 				print "\","
 				puts "  \"data\": {"
-				puts "       \"weight\": 1" 	
+				puts "       \"weight\": 1"
+#                               puts "       \"relation\": \""
+#                               print depArr[itemcount] 	
+#				print "\""
 				puts "    }"
-				
 				puts " }]"
+				# test if not last in uniqArr, if not add "}," else "}"
+				if count != uniqArr.length
 				puts "},"
+				end
 	end
-	
+
+	#test if last in uniqArr
+		
 	# put closing JSON marking
 
 	puts "}];"

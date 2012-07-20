@@ -1,0 +1,3155 @@
+  
+var json = [{
+
+ "id": "db4-utils",
+ "name": "db4-utils",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "db4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "sqlite",
+ "name": "sqlite",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "sqlite",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "ncurses-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "readline",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "bzip2",
+ "name": "bzip2",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "bzip2-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "file-libs",
+ "name": "file-libs",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "zlib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "file",
+ "name": "file",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "file-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "zlib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "flac",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "alsa-lib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libogg",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "file",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libvorbis",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libX11",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "findutils",
+ "name": "findutils",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "gzip",
+ "name": "gzip",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "coreutils",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "curl",
+ "name": "curl",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "curl",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "zlib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libidn",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "openssl",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "flac",
+ "name": "flac",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "flac",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libstdc++",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libogg",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "lcms",
+ "name": "lcms",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "lcms-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libjpeg-turbo",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libtiff",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "zlib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "bluez",
+ "name": "bluez",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "bluez",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "udev",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "hwdata",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bluez-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glib2",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libusb",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "systemd",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "gnupg2",
+ "name": "gnupg2",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "bzip2-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "curl",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcrypt",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgpg-error",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libksba",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libusb",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "pth",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "readline",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "zlib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "iproute",
+ "name": "iproute",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "iproute",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "mkdevnodes",
+ "name": "mkdevnodes",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "ntpdate",
+ "name": "ntpdate",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "ntpdate",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "shadow-utils",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libcap",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "procps",
+ "name": "procps",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "procps",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "ncurses-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "psmisc",
+ "name": "psmisc",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "ncurses-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "time",
+ "name": "time",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "usbutils",
+ "name": "usbutils",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "coreutils",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "hwdata",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libusb1",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "gawk",
+ "name": "gawk",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "coreutils",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "grep",
+ "name": "grep",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "pcre",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "sed",
+ "name": "sed",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "connman",
+ "name": "connman",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "bluez",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "connman",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "ofono",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "ntp",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "iptables",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "wpa_supplicant",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glib2",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "pacrunner",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "systemd",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "ofono",
+ "name": "ofono",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "ofono",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "udev",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bluez-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glib2",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "systemd",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "libjpeg-turbo-devel",
+ "name": "libjpeg-turbo-devel",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libjpeg-turbo",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "udev",
+ "name": "udev",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "udev",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "mkdevnodes",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "sed",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "coreutils",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "MAKEDEV",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "hwdata",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "pam",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glib2",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libacl",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "systemd",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "rpm-libs",
+ "name": "rpm-libs",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "file-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "rpm-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bzip2-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "rpm",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "db4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "elfutils-libelf",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libcap",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "liblua",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "nss",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "popt",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "xz-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "zlib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "desktop-file-utils",
+ "name": "desktop-file-utils",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glib2",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "qt-qmlviewer",
+ "name": "qt-qmlviewer",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "libqtcore4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtdeclarative4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtgui4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtnetwork4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtopengl4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtscript4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtsql4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtsvg4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtxmlpatterns4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libstdc++",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "fontconfig",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "mesa-llvmpipe-libEGL",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "mesa-llvmpipe-libGLESv2",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "xorg-x11-drv-keyboard",
+ "name": "xorg-x11-drv-keyboard",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "xkeyboard-config",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "xorg-x11-server-Xorg",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "xorg-x11-drv-mouse",
+ "name": "xorg-x11-drv-mouse",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "xorg-x11-server-Xorg",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "kmod-libs",
+ "name": "kmod-libs",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "pulseaudio-module-x11",
+ "name": "pulseaudio-module-x11",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "sed",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "pulseaudio",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libICE",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libSM",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libX11",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libXtst",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libasyncns",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "file",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libtool-ltdl",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libxcb",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "orc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "speex",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "xcb-util",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "pulseaudio",
+ "name": "pulseaudio",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "udev",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "pulseaudio",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "gconf",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "alsa-lib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glib2",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libICE",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libSM",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libX11",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libXtst",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libasyncns",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "file",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libtool-ltdl",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libxcb",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "orc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "speex",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "xcb-util",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "bash",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "libqtcore4",
+ "name": "libqtcore4",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "libqtcore4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libstdc++",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "fontconfig",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glib2",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "zlib",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "libqtdbus4",
+ "name": "libqtdbus4",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "libqtcore4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtdbus4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtxml4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libstdc++",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "dbus-libs",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "fontconfig",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "libqtdeclarative4",
+ "name": "libqtdeclarative4",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "libqtcore4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtdeclarative4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtdesigner4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtgui4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtnetwork4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtscript4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtsql4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtsvg4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtxml4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtxmlpatterns4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libstdc++",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "fontconfig",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "mesa-llvmpipe-libEGL",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "libqtdesigner4",
+ "name": "libqtdesigner4",
+ "data": {
+    "$dim": 5.000000,
+    "some other key": "some other value"
+ },
+ "adjacencies": [
+ {
+  "nodeTo": "libqtcore4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtdesigner4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtgui4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtscript4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libqtxml4",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libgcc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "libstdc++",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "fontconfig",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "glibc",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "mesa-llvmpipe-libEGL",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "copyright",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "description",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }, 
+ {
+  "nodeTo": "license",  "data": {
+       "weight": 1,
+       "$type":"arrow",
+       "$color":"#dd99dd",
+       "$dim":25
+    }
+ }]
+},
+
+{ "id": "libqtgui4",
+
