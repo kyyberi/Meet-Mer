@@ -22,6 +22,9 @@
   %p
     %b Channel:
     = @meeting.channel
+.intro
+  %p 
+    = render "content", :locals => { :meeting => @meeting }
 
   = link_to 'Edit', edit_meeting_path(@meeting)
   \|

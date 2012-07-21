@@ -20,5 +20,7 @@ class ApplicationController < ActionController::Base
     @meetings12 = Meeting.find(:all, :conditions => {:meetingmonth => "12", :meetingyear => Time.now.year})
   end
 
+
+
 end
 

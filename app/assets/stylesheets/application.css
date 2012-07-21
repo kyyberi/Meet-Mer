@@ -113,7 +113,7 @@ border-radius: 10px;
 #contentwrap {
     margin-left: 310px;
     float: left;
-   
+    
 }
 
 #content {
@@ -150,16 +150,101 @@ border-radius: 10px;
     float: left;
     margin: 0 auto;
     clear: both;
+    margin-top:0px;
 }
 
 #footer {
     height: 40px;
     background: #1D4563;
+    background-image:url('mer-logo-bg.png');
+    background-attachment:fixed;
+    background-position:bottom;
     border-radius: 10px;
     border: 0px solid #eb9036;
     margin: 5px;
+    margin-top:10px;
+    height:150px;
 }
 
+.footerbox {
+    border: 0px solid #eb9036;
+    border-radius: 10px;
+    float:left;
+    width:31%;
+    margin-left:18px;
+    margin-top:5px;
+    color:#eee;
+}
+
+.footerbox h2 {
+    color:#ddd;
+    padding-bottom:10px;
+    border-bottom:dotted 0px #67b7fc;
+    font-size:2em;
+    padding-left:20px;
+    text-shadow: -1px 1px 0px #000; 
+}
+
+.footerbox ul {
+        list-style-image: url("beatport-arrow.png");
+         list-style-position: inside; 
+        padding-top:5px;
+	height:80px;
+	padding-left:15px;
+}
+
+
+.footerbox ul li {
+        margin-bottom:5px;
+        margin-top:10px;
+        margin-left:15px;
+	font-size:1.0em;
+      
+}
+
+.mer {
+    background-image:url('mer-footer-bg.png');
+    background-attachment:fixed;
+    background-position:left middle;
+    text-indent:80px;
+}
+
+.meetmer {
+    	background-image:url('mer-dash-bg.png');
+	background-position:left -50px;
+    	text-indent:90px;
+}
+
+
+.footerlink {
+  	color:#99cf1f;       
+	font-size:1.0em;
+	text-decoration:none; 
+}
+
+.footerlink:hover {
+        text-decoration:underline;        
+}
+
+.first {
+	border-right: dotted 1px #67b7fc;
+	
+}
+
+.middle {
+
+}
+
+
+.last {
+        border-left: dotted 1px #67b7fc;
+}
+
+
+
+
+
+}
 .intro {
         -moz-box-shadow: -2px 2px 5px #888;
         -webkit-box-shadow: -2px 2px 5px #888;

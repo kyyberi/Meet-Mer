@@ -21,7 +21,11 @@
     %ul
       %li 12:OO UTC - Mer QA meeting
 .intro
-  %h2.content Recent meetings
+  %h2.content 
+    Recent meetings
+    %span 
+      = @meetings[0].created_at
+     
   %p Below you'll find 10 most recent meetings - latest first. 
   %p If you want to see older meetings, see left column where you can find all meetings sorted by months.   
   %table.bordered

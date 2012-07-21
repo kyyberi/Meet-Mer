@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @about.title
+%p
+  %b Content:
+  = @about.content
+
+= link_to 'Edit', edit_about_path(@about)
+\|
+= link_to 'Back', abouts_path
