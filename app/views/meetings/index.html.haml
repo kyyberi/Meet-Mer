@@ -1,9 +1,18 @@
+- content_for(:head) do
+  %title
+    :escaped 
+      #MeetMer: #Mer project meetings  
+    (
+    = @meetingsall.length
+    ) + Meeting information
 
 #leftcolumnwrap
   #leftcolumn
     = render "accordion"
 .intro
-  %h2.content About regular meetings
+  %h2.content 
+    About regular meetings
+    = render 'layouts/shared/sharebuttons'
   %p Mer aims to be a FOSS, inclusive, meritocratically governed and openly developed Core optimised for HTML5/QML/JS, providing a mobile-optimised base distribution for use by device manufacturers. Mer is based upon the work from the Core section of the MeeGo project and aims to share effort and code together with the Tizen project once Tizen tools and code are publicly available.
   %p.fancy Meetings are held in #mer-meeting on irc.freenode.net, using the MeetBot
   %p

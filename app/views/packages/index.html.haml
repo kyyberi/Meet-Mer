@@ -1,3 +1,11 @@
+- content_for(:head) do
+  %title
+    :escaped
+      #MeetMer: #Mer Core Packages (
+    = @packages.count
+    )
+    listing
+
 
 #leftcolumnwrap
   #leftcolumn
@@ -5,7 +13,7 @@
 .intro
   %h2.content 
     Mer core package listing
-    
+    = render "layouts/shared/sharebuttons"
   %p In the below table you can find packages included in Mer core. Note that dependencies are not the same as packages. You can see the dependencies in separate view. 
    
   %p
