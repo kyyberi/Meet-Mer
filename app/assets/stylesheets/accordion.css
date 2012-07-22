@@ -51,9 +51,47 @@ h2.active {background-position: left bottom;}
 	padding: 0 0 0px 0;
 	border-bottom: 0px dotted #ccc;
 }
-.acc_container img {
+.acc_container_tweets img {
 	float: left;
 	margin: 10px 15px 15px 0;
 	padding: 5px;
 	background: #ddd;
 	border: 1px solid #ccc;
+}
+
+.acc_container_tweets {
+	margin: 0 0 5px; padding: 0;
+	overflow: hidden;
+	font-size: 1.2em;
+	width: 285px;
+	clear: both;
+	background: #eee;
+	border: 1px solid #d6d6d6;
+	border-right:none;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px; 
+}
+.acc_container_tweets .block {
+	padding-top: 5px;
+	padding-right:5px;
+        background-color:#fff;
+}
+.acc_container_tweets .block p {
+	padding: 5px 0;
+	margin: 5px 0;
+}
+.acc_container_tweets h3 {
+	font-size: 1.1em;
+	margin: 10px 10px; 0px;
+	padding: 0 0 0px 0;
+	border-bottom: 0px dotted #ccc;
+}
+
+.container {
+	margin-top:0px;
+	padding-top:0px;
+}

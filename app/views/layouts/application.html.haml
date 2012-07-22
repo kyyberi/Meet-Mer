@@ -7,10 +7,41 @@
     %title= content_for?(:title) ? yield(:title) : "Meet-Mer v. 0.0.1 by kyyberi"
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
-    = stylesheet_link_tag    "application", "accordion", "shadowbox", "shadowbox2", "menu", :media => "all"
-    = javascript_include_tag "application", "shadowbox"
+    = stylesheet_link_tag    "jtweetsanywhere", "application", "accordion", "shadowbox", "shadowbox2", "menu", :media => "all"
+    = javascript_include_tag "application", "shadowbox", "http://platform.twitter.com/anywhere.js?id=vE18URdfURbEJUbC27aQ&v=1"
     = csrf_meta_tags 
     = yield(:head)
+    
+
+  :javascript
+    $(document).ready(function() {
+      $('#tweets').jTweetsAnywhere({
+        searchParams: ['q=MeetMer'],
+        count: 10,
+        showTweetFeed: {    
+          autoConformToTwitterStyleguide: true,
+          showTimestamp: {
+            refreshInterval: 120
+          },
+          autorefresh: {
+            mode: 'trigger-insert',
+            interval: 30
+          },
+          paging: { mode: 'more' }
+        },
+        onDataRequestHandler: function(stats, options) {
+        
+          if (stats.dataRequestCount < 62) {
+              return true;
+          }
+          else {
+            stopAutorefresh(options);
+            alert("To avoid struggling with Twitter's rate limit, we stop loading data after 10 API calls.");
+          }
+        }
+      });
+    });
+
   :javascript
     $(document).ready(function(){
 	
