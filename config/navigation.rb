@@ -4,7 +4,7 @@ SimpleNavigation::Configuration.run do |navigation|
   # Define the primary navigation
   navigation.items do |primary|
     primary.item :meetings, 'Meetings <br /><span>takes you to<br /> meetings listing</span>', meetings_path
-    primary.item :users, 'Users', users_path
+#    primary.item :users, 'Users', users_path
     primary.item :packages, 'Packages <br /><span>takes you to<br /> Mer core <br /> package listing</span>', packages_path
     primary.item :abouts, 'About <br /><span>What is MeetMer<br />and more</span>', abouts_path
     # Add an item which has a sub navigation (same params, but with block)

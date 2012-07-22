@@ -1,9 +1,17 @@
+- content_for(:head) do
+  %title
+    Mer meeting details: 
+    = @meeting.title 
+    |
+    = @meeting.meetingdate
+   
 #leftcolumnwrap
   #leftcolumn
     = render "accordion"
 .intro
   %h2.content
     = @meeting.title
+    = render 'layouts/shared/sharebuttons'
   %p
     %b Date:
     = @meeting.meetingdate

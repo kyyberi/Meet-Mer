@@ -1,8 +1,9 @@
 table {
-    *border-collapse: collapse; /* IE7 and lower */
+    /*border-collapse: collapse; /* IE7 and lower */
     border-spacing: 0;
-    width: 100%;    
+    width: 98%;    
     font-size:0.8em;
+	margin-right:25px;
 }
 
 .bordered {

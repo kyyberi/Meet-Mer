@@ -33,6 +33,8 @@
 	display: inline;
 	float: left;
         margin-left:5px;
+	position:relative;
+   	top:-10px;
 }
 
 .jta-tweet-profile-image-link
@@ -51,6 +53,7 @@
 
 .jta-tweet-text
 {
+	line-height:1.4em;
 }
 
 .jta-tweet-body-list-profile-image-present
@@ -61,6 +64,7 @@
 .jta-tweet-user-name
 {
 	display: block;
+	margin-bottom:5px;
 }
 
 .jta-tweet-user-screen-name
@@ -87,7 +91,7 @@
 .twitter-anywhere-user:hover
 {
     color: #900;
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .jta-tweet-user-full-name-link
@@ -124,6 +128,8 @@
     color: #999;
     font-size: 11px;
     margin-top: 3px;
+	margin-top:10px;
+	margin-bottom:10px;
 }
 
 .jta-tweet-twitter-bird
@@ -235,16 +241,18 @@
 	margin-top: 20px;
        margin-left:10px;
         margin-bottom:20px;
-
 }
 
 .jta-tweet-list-controls-button
 {
+	background-image: url(btnbg.png); 	
 	padding: 5px;
 	padding-left: 20px;
 	padding-right: 20px;
 	text-align: center;
-    border: 1px solid #999;
+   	 border: 0px solid #999;
+	color:#fff;
+	-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;
 }
 
 .jta-tweet-list-controls-button:hover
@@ -252,6 +260,7 @@
 	color: #fff;
 	background-color:#21631c;
 	cursor: pointer;
+	text-decoration:underline;
 }
 
 .jta-tweet-list-controls-button-more
@@ -374,4 +383,11 @@
 	visibility: hidden;
 	width: 0;
 	height: 0;
+}
+
+#tweetinit {
+	font-size:0.9em;
+	padding:10px;
+	border:solid 1px #ddd;
+	color:#000;
 }

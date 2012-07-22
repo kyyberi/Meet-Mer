@@ -4,20 +4,22 @@
     %meta{:charset => "utf-8"}
     %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
-    %title= content_for?(:title) ? yield(:title) : "Meet-Mer v. 0.0.1 by kyyberi"
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
     = stylesheet_link_tag    "jtweetsanywhere", "application", "accordion", "shadowbox", "shadowbox2", "menu", :media => "all"
-    = javascript_include_tag "application", "shadowbox", "http://platform.twitter.com/anywhere.js?id=vE18URdfURbEJUbC27aQ&v=1"
+    = javascript_include_tag "application", "shadowbox", "http://platform.twitter.com/anywhere.js?id=vE18URdfURbEJUbC27aQ&v=1", "http://w.sharethis.com/button/buttons.js"
     = csrf_meta_tags 
     = yield(:head)
-    
+  :javascript
+    var switchTo5x=true;
+    stLight.options({publisher: "4b278036-5ac5-4758-bfe8-0d450eb38bb4"});    
 
   :javascript
     $(document).ready(function() {
+      $('#tweetinit').hide();
       $('#tweets').jTweetsAnywhere({
         searchParams: ['q=MeetMer'],
-        count: 10,
+        count: 5,
         showTweetFeed: {    
           autoConformToTwitterStyleguide: true,
           showTimestamp: {
@@ -30,14 +32,7 @@
           paging: { mode: 'more' }
         },
         onDataRequestHandler: function(stats, options) {
-        
-          if (stats.dataRequestCount < 62) {
-              return true;
-          }
-          else {
-            stopAutorefresh(options);
-            alert("To avoid struggling with Twitter's rate limit, we stop loading data after 10 API calls.");
-          }
+          return true;        
         }
       });
     });

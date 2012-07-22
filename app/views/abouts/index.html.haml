@@ -2,10 +2,12 @@
   #leftcolumn
     .container
       %h2.acc_trigger
-        %a{:href=>"#"} MerMeet Tweets
+        %a{:href=>"#"} #MeetMer Tweets
     %div{:class => 'acc_container_tweets'}
       .block_tweets
         #tweets
+          %p{:id =>'tweetinit'} If you enable Javascript, tweets will appear here.
+
 
 = render "background"
 = render "purpose"
