@@ -20,7 +20,7 @@ require 'mysql'
 require 'date'
 
 ctime = Time.new
-cyear = ctime.year
+cyear = String(ctime.year)
 
 path = "http://mer.bfst.de/meetings/mer-meeting/"
 path += cyear
@@ -185,7 +185,7 @@ end
 #### iterate found links, get query from collect()
 def createQueries(newLinks)
 	columns = "INSERT INTO meetings (channel,title,meetingyear,"
-	columns += "meetingmonth,meetingdate,startTime,endTime,murl,logsurl), updated_at, created_at "
+	columns += "meetingmonth,meetingdate,startTime,endTime,murl,logsurl, updated_at, created_at)"
         @retArr = Array.new
 	@newLinks.each do |loglink|
 #		puts link
@@ -204,11 +204,11 @@ def createQueries(newLinks)
 			values += link
 			values += "','"
 			values += loglink
-			values += "','"
-			values += NOW() # add current time to updated_at field
-			values += "','"
-			values += NOW() # add current time to created_at field
-			values += "'"
+			values += "',"
+			values += "NOW()" # add current time to updated_at field
+			values += ","
+			values += "NOW()" # add current time to created_at field
+			values += ""
 			values += ")"	
 			
 			query = columns
@@ -232,7 +232,7 @@ end
 con = Mysql.new('localhost', username, passwd, database)  
 ### If passwordless access allowed use:
 #con = Mysql.new('localhost', '', '', database)  
-rs = con.query('select logsurl,starttime from meetings WHERE meetingyear = YEAR(CURDATE())'   
+rs = con.query('select logsurl,starttime from meetings WHERE meetingyear = YEAR(CURDATE())')   
 con.close # could be left open put prefer to close if not needed. 
 
 # get list of new links
