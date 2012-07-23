@@ -1,9 +1,31 @@
+####################################################
+# meetings.rb
+####################################################
+# - Updates Meetings table in database by retrieving
+# input data from web (list of IRC meetings).  
+#
+# - Updates only current year meetings, 
+# could be limited to few months back 
+#
+# - Also dababase query is limited to get current
+# year fields. Possible bug: could leave out past
+# meetings if update not run near turn of the year
+#
+# Author: Jarkko (kyyberi) Moilanen
+# Email: jarkko@want3d.fi
+
 require 'nokogiri'
 require 'open-uri'
 require 'mysql'
 require 'date'
 
-path = "http://mer.bfst.de/meetings/mer-meeting/2012/"
+ctime = Time.new
+cyear = ctime.year
+
+path = "http://mer.bfst.de/meetings/mer-meeting/"
+path += cyear
+path += "/"
+
 @links = Array.new
 
 
@@ -163,12 +185,13 @@ end
 #### iterate found links, get query from collect()
 def createQueries(newLinks)
 	columns = "INSERT INTO meetings (channel,title,meetingyear,"
-	columns += "meetingmonth,meetingdate,startTime,endTime,murl,logsurl) "
+	columns += "meetingmonth,meetingdate,startTime,endTime,murl,logsurl), updated_at, created_at "
         @retArr = Array.new
 	@newLinks.each do |loglink|
 #		puts link
 		link = loglink.sub( ".log.html", ".html" )
 		#puts link
+		curtime = Time.new
 		doc2 = Nokogiri::HTML(open(link))
 			queryp1 = collect(doc2, link, loglink)
 			queryp2 = getDates(link)
@@ -181,6 +204,10 @@ def createQueries(newLinks)
 			values += link
 			values += "','"
 			values += loglink
+			values += "','"
+			values += NOW() # add current time to updated_at field
+			values += "','"
+			values += NOW() # add current time to created_at field
 			values += "'"
 			values += ")"	
 			
@@ -205,7 +232,7 @@ end
 con = Mysql.new('localhost', username, passwd, database)  
 ### If passwordless access allowed use:
 #con = Mysql.new('localhost', '', '', database)  
-rs = con.query('select logsurl,starttime from meetings')   
+rs = con.query('select logsurl,starttime from meetings WHERE meetingyear = YEAR(CURDATE())'   
 con.close # could be left open put prefer to close if not needed. 
 
 # get list of new links
