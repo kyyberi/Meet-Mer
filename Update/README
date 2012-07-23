@@ -1,0 +1,7 @@
+The ruby scripts in this folder update database. 
+Each script (bugs.rb, meetings.rb etc) update one table in database. 
+All operation are done on localhost.
+
+Normal usage is:
+	script.rb database_name username passwd  
+If any of the parameters are not given, script will abort

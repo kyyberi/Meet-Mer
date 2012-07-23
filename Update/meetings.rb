@@ -225,7 +225,7 @@ def processQueries(arr)
 end
 
 ###################################################
-### BEGIN UPDATE PREPARATIONS
+### BEGIN UPDATE 
 ###################################################
 
 # First connect to database and select existing meetings from there

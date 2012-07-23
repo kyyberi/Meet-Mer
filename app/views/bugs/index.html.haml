@@ -1,0 +1,49 @@
+- content_for(:head) do
+  %title
+    :escaped 
+      #MeetMer: #Mer not taken bugs  
+    (
+    = @bugs[0].created_at
+    )
+#leftcolumnwrap
+  #leftcolumn
+
+.intro
+  %h2.content 
+    Bugs - contribute by solving bugs
+    = render 'layouts/shared/sharebuttons'
+  %p More about bugs .... Perhaps something about process...
+
+.intro
+  %h2.content 
+    Not taken bugs - pick one
+     
+  %p 
+    Below you'll find all not taken bugs 
+    %span
+      (list updated:  
+      = @bugs[0].created_at
+      ) 
+  %p List is sorted by date when updated; bug updated last is first in the list.  
+  %table{:class => 'bordered', :id=>'sortme'}
+    %thead
+      %tr
+        %th Title
+        %th Updated
+        %th Priority
+        %th Severity
+    %tbody
+      - @bugs.each do |bug|
+        %tr 
+          %td.btitle 
+            %a{:href=> bug.blink} 
+              = bug.btitle
+          %td.bupdated
+            = bug.updated_at 
+          %td.bpriority
+            = bug.bpriority
+          %td.bseverity
+            = bug.bseverity
+
+
+

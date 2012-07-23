@@ -7,13 +7,19 @@
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
     = stylesheet_link_tag    "jtweetsanywhere", "application", "accordion", "shadowbox", "shadowbox2", "menu", :media => "all"
-    = javascript_include_tag "application", "shadowbox", "http://platform.twitter.com/anywhere.js?id=vE18URdfURbEJUbC27aQ&v=1", "http://w.sharethis.com/button/buttons.js"
+    = javascript_include_tag "application", "shadowbox", "http://platform.twitter.com/anywhere.js?id=vE18URdfURbEJUbC27aQ&v=1", "http://w.sharethis.com/button/buttons.js", "jquery.tablesorter.min"
     = csrf_meta_tags 
     = yield(:head)
   :javascript
     var switchTo5x=true;
     stLight.options({publisher: "4b278036-5ac5-4758-bfe8-0d450eb38bb4"});    
 
+  :javascript
+    $(document).ready(function() 
+      { 
+        $("#sortme").tablesorter( {sortList: [[2,1]]} ); 
+      } 
+    ); 
   :javascript
     $(document).ready(function() {
       $('#tweetinit').hide();

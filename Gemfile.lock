@@ -90,6 +90,7 @@ GEM
       haml (~> 3.0)
       railties (~> 3.0)
     hike (1.2.1)
+    htmlentities (4.3.1)
     i18n (0.6.0)
     journey (1.0.4)
     jquery-rails (2.0.2)
@@ -206,6 +207,7 @@ DEPENDENCIES
   feedzirra
   haml (>= 3.1.6)
   haml-rails (>= 0.3.4)
+  htmlentities
   jquery-rails
   launchy (>= 2.1.0)
   mysql2

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Btitle:
+  = @bug.btitle
+%p
+  %b Blink:
+  = @bug.blink
+%p
+  %b Bauthor:
+  = @bug.bauthor
+%p
+  %b Bstatus:
+  = @bug.bstatus
+
+= link_to 'Edit', edit_bug_path(@bug)
+\|
+= link_to 'Back', bugs_path

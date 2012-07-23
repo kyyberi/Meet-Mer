@@ -1,0 +1,11 @@
+= simple_form_for(@bug) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :btitle
+    = f.input :blink
+    = f.input :bauthor
+    = f.input :bstatus
+
+  .form-actions
+    = f.button :submit
