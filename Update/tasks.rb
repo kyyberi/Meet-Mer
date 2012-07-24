@@ -252,8 +252,8 @@ begin
 
 	con.close 
 
-rescue
-        puts "Error #{$!}"
+rescue => e
+	puts "oh my, an exception: #{e}: #{e.backtrace.join("\n")}"
 ensure
         abort
 end
