@@ -26,5 +26,3 @@
       = link_to 'Project in Github', 'http://github.com/kyyberi/Meet-Mer', {:class => 'footerlink'} 
     %li 
       = link_to 'MeetMer issue tracker', 'http://github.com/kyyberi/Meet-Mer/issues', {:class => 'footerlink'}
-    %li 
-      = link_to 'Localization', 'https://www.transifex.com/projects/p/meetmer/', {:class => 'footerlink'}
