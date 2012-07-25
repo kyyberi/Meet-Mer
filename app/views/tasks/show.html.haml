@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Ttitle:
+  = @task.ttitle
+%p
+  %b Tlink:
+  = @task.tlink
+%p
+  %b Tauthor:
+  = @task.tauthor
+%p
+  %b Tproduct:
+  = @task.tproduct
+%p
+  %b Tseverity:
+  = @task.tseverity
+%p
+  %b Tpriority:
+  = @task.tpriority
+%p
+  %b Tstatus:
+  = @task.tstatus
+
+= link_to 'Edit', edit_task_path(@task)
+\|
+= link_to 'Back', tasks_path

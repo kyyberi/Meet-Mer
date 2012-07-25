@@ -1,0 +1,14 @@
+= simple_form_for(@task) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :ttitle
+    = f.input :tlink
+    = f.input :tauthor
+    = f.input :tproduct
+    = f.input :tseverity
+    = f.input :tpriority
+    = f.input :tstatus
+
+  .form-actions
+    = f.button :submit
