@@ -103,32 +103,33 @@ def getTasksNotTaken(atomurl)
       	#	     &lt;/table&gt;
     	#	</summary>
   	# </entry>
-		ttitle = strCleanUp(String(node.xpath('xmlns:title').inner_text))
-		@arr_node.push(ttitle)
-	
+		
+		# title special chars escaped at insert
+		ttitle = node.xpath('xmlns:title').inner_text
+		# ttitle = strCleanUp(String(node.xpath('xmlns:title').inner_text))
 	        tlink = node.xpath('xmlns:link').attr('href')
-	        @arr_node.push(tlink)
-	
 		tauthor = strCleanUp(String(node.xpath('xmlns:author/xmlns:name').inner_text))
-	        @arr_node.push(tauthor)
-
-	        tupdated = node.xpath('xmlns:updated').inner_text
-	        @arr_node.push(tupdated)
-
+		tupdated = node.xpath('xmlns:updated').inner_text
 		createdhtml = node.xpath('xmlns:summary').inner_text
-		# parse html with nokogiri and get created at value
+		# parse html with nokogiri and get values
 		html = Nokogiri::HTML(HTMLEntities.new.decode(createdhtml))
 		created = html.xpath('//td[. = "Creation date"]/following-sibling::td').inner_text
 		severity = html.xpath('//td[. = "Severity "]/following-sibling::td').inner_text	
 		priority = html.xpath('//td[. = "Priority"]/following-sibling::td').inner_text	
-		product = strCleanUp(String(html.xpath('//td[. = "Product"]/following-sibling::td').inner_text))	
+		product = strCleanUp(String(html.xpath('//td[. = "Product"]/following-sibling::td').inner_text))
+
+		# Need to get
+		# ttitle, tlink, tauthor, tproduct, tseverity, tpriority, tstatus, updated_at, created_at	
+		@arr_node.push(ttitle)
+		@arr_node.push(tlink)
+		@arr_node.push(tauthor)		
+		@arr_node.push(product)	
 		@arr_node.push(severity)	
 		@arr_node.push(priority)
-		@arr_node.push(product)	
-		@arr_node.push(created)	
-
 		@arr_node.push('new')		
-
+		@arr_node.push(tupdated)
+		@arr_node.push(created)	
+		# Push to main array
 		@arr_not_taken.push(@arr_node)
 		
 		
@@ -162,19 +163,22 @@ def getNew(db_results, arr_not_taken)
 		@dbArrItem.push(h['tlink'])
 		@dbArrItem.push(h['tauthor'])
 		@dbArrItem.push(h['tproduct'])
-		@dbArrItem.push(h['tupdated'])
+		@dbArrItem.push(h['tseverity'])
+		@dbArrItem.push(h['tpriority'])
 		@dbArrItem.push(h['tstatus'])
+		@dbArrItem.push(h['updated_at'])
+		@dbArrItem.push(h['created_at'])		
 		
 		@dbArr.push(@dbArrItem)		
 	} 
 
 	# get diff of arrays == links not found
-@notFound = @newlist - @dbArr
-print "Found new not taken tasks - " #FIXME: does not work like this
-print @notFound.length
-puts " pcs"
+	@notFound = @newlist - @dbArr
+	print "Found new not taken tasks - " #FIXME: does not work like this
+	print @notFound.length
+	puts " pcs"
 
-return @notFound
+	return @notFound
 
 end
 ###################################################
@@ -197,7 +201,7 @@ db_results = con.query(querystr)
 con.close # could be left open put prefer to close if not needed. 
 
 # get list of new links
-@arrNotTaken = getTAsksNotTaken(task_list_atom)
+@arrNotTaken = getTasksNotTaken(task_list_atom)
 
 # Compare existing and new and get difference. FIXME: Not working
 @newNotTaken = getNew(db_results, @arr_not_taken)
@@ -219,35 +223,39 @@ begin
 	# deleted is returned; in MySQL 3.23 the number returned is always zero.
 
 	# Constant input start
-	columns = "INSERT INTO bugs (ttitle, tlink, tproduct, tauthor,"
-	columns += "tseverity, tpriority, updated_at, created_at, tstatus) " 
+	newquery = "INSERT INTO tasks (" + columns + ") " 
 	# construct values
+	# ttitle, tlink, tauthor, tproduct, tseverity, tpriority, tstatus, updated_at, created_at
 	@arrNotTaken.each do |task|
 		values = "VALUES ('"
-		values += task[0] # title
+		# need to sanitize, could use also http://api.rubyonrails.org/classes/ActiveRecord/Sanitization/ClassMethods.html
+		# but that requires yet another include... 
+		values += con.escape_string(task[0]) # ttitle
 		values += "','"
-		values += task[1] # url
+		values += task[1] # tlink
 		values += "','"
-		values += task[2] # name
+		values += con.escape_string(task[2]) # tauthor
 		values += "','"
-		values += task[4] # severity
+		values += con.escape_string(task[3]) # tproduct
 		values += "','"
-		values += task[3] # updated
+		values += task[4] # tseverity
 		values += "','"
-		values += task[5] # priority
+		values += task[5] # tpriority
 		values += "','"
-		values += task[6] # created
+		values += task[6] # tstatus
 		values += "','"
-		values += task[7] # status
+		values += task[7] # updated_at
+		values += "','"
+		values += task[8] # created_at
 		values += "')"
 		# Will output something like:
 
-		insert = columns
+		insert = newquery
 		insert += values
 
-		puts insert
+		#puts insert
 		# execute insert
-		# rs = con.query(insert)
+		 rs = con.query(insert)
 	end
 
 	con.close 
@@ -255,7 +263,7 @@ begin
 rescue => e
 	puts "oh my, an exception: #{e}: #{e.backtrace.join("\n")}"
 ensure
-        abort
+        
 end
 
 
