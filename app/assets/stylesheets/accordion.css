@@ -44,6 +44,10 @@ h2.active {background-position: left bottom;}
 .acc_container .block p {
 	padding: 5px 0;
 	margin: 5px 0;
+        margin-left:15px;
+        margin-right:15px;
+	font-size:0.8em;
+	line-height:1.4em;
 }
 .acc_container h3 {
 	font-size: 1.1em;
@@ -94,4 +98,15 @@ h2.active {background-position: left bottom;}
 .container {
 	margin-top:0px;
 	padding-top:0px;
+}
+
+#chart_div {
+	display:none;
+	width: 250px; 
+	height: 200px; 
+	margin: 0 auto;
+}
+
+strong {
+	font-weight:bold;
 }

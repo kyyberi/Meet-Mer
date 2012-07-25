@@ -2,8 +2,17 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
-
+    @tasks = Task.find(:all, :order => 'updated_at DESC')
+    @tasksbydate = Task.find(:all, :order => 'tpriority ASC, tseverity')
+    @tasksQA = Task.find(:all, :conditions => {:tproduct => "Mer QA"})
+    @tasksVendorInterface = Task.find(:all, :conditions => {:tproduct => "Mer Vendor Interface"})
+    @tasksPolicies = Task.find(:all, :conditions => {:tproduct => "Mer Policies and Processes"})
+    @tasksMINT = Task.find(:all, :conditions => {:tproduct => "Mer Integration Tools  MINT"})
+    @tasksCore = Task.find(:all, :conditions => {:tproduct => "Mer Core"})
+    @taskstypes = Task.select(:tproduct).uniq
+    # not implemented at database level. Community has planned some kind of keyword to identify
+    # low hanging fruits.[25.7.2012] 
+    @tasksBananas = Task.find(:all, :conditions => {:tproduct => "Easy"})
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @tasks }

@@ -1,31 +1,52 @@
-%h1 Listing tasks
+- content_for(:head) do
+  %title
+    :escaped 
+      #MeetMer: #Mer not taken tasks  
+    (
+    = @tasks[0].created_at
+    )
+#leftcolumnwrap
+  #leftcolumn
+    = render 'accordion'
+.intro
+  %h2.content 
+    Tasks - contribute by taking tasks
+    = render 'layouts/shared/sharebuttons'
+  %p More about tasks .... Perhaps something about process...
 
-%table
-  %tr
-    %th Ttitle
-    %th Tlink
-    %th Tauthor
-    %th Tproduct
-    %th Tseverity
-    %th Tpriority
-    %th Tstatus
-    %th
-    %th
-    %th
+.intro
+  %h2.content 
+    Not taken tasks - pick one
+  %p
+    On the left column, you'll find tasks divided into categories: 
+    %ul
+      %li Low hanging fruits (takes only a few minutes to do)
+      - @taskstypes.each do |category|       
+        %li 
+          = category.tproduct
 
-  - @tasks.each do |task|
-    %tr
-      %td= task.ttitle
-      %td= task.tlink
-      %td= task.tauthor
-      %td= task.tproduct
-      %td= task.tseverity
-      %td= task.tpriority
-      %td= task.tstatus
-      %td= link_to 'Show', task
-      %td= link_to 'Edit', edit_task_path(task)
-      %td= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete
+  %p 
+    Below you'll find all not taken tasks 
+    %span
+      (list updated:  
+      = @tasks[0].created_at
+      ) 
+  %p List can be sorted by clicking column names.  
+  %table{:class => 'bordered', :id=>'sortme'}
+    %thead
+      %tr
+        %th Title
+        
+        %th Priority
+        %th Product
+    %tbody
+      - @tasks.each do |task|
+        %tr 
+          %td.btitle 
+            = link_to task.ttitle, task
+          %td.bpriority
+            = task.tpriority
+          %td.bseverity
+            = task.tproduct
 
-%br
 
-= link_to 'New Task', new_task_path

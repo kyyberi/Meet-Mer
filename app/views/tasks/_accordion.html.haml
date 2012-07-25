@@ -1,0 +1,151 @@
+.container
+  %h2.acc_trigger
+    %a{:href=>"#"} Tasks info
+  .acc_container
+    .block
+      %p 
+        %strong 
+          Tasks are easy way to contribute, just pick one of 
+          = @tasks.count
+          tasks
+          and get involved. 
+      %div{:id =>'chart_div'}
+    :javascript
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'available'],
+          ['QA',     
+            #{@tasksQA.count}
+          ],
+          ['Mer Vendor interface',      
+            #{@tasksVendorInterface.count}
+          ],
+          ['Mer policies and processses',  
+            #{@tasksPolicies.count}
+          ],
+          ['Intergration Tools MINT', 
+            #{@tasksMINT.count}
+          ],
+          ['Mer Core',    
+            #{@tasksCore.count}
+          ]
+        ]);
+
+        var options = {
+          title: "Tasks by gategories", is3D: false, colors:['#3161b6','#0a74ac', '#6f6f6f', '#67b7fc', '#1c4867'], legend: {position: 'left', textStyle: {color: '#000', fontSize: 10}}, chartArea:{left:20,top:10,width:"60%",height:"70%"} 
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    :javascript
+      $(document).ready(function() {
+        $('#chart_div').delay(1200).slideToggle("fast");
+      });
+    .block  
+      %p Easy tasks are listed under 'Low hanging fruits' (takes a few minutes)
+         
+      %br   
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Low hanging fruits
+      %span.count
+        (
+        = @tasksBananas.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - if @tasksBananas.count == 0
+          %li Yay! None found
+        - else
+          - @tasksBananas.each do |item|
+            %li
+              %div.date
+                = item.updated_at
+                %div.title
+                  = link_to item.ttitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer QA
+      %span.count
+        (
+        = @tasksQA.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @tasksQA.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.ttitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Vendor Interface
+      %span.count
+        (
+        = @tasksVendorInterface.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @tasksVendorInterface.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.ttitle, item
+
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Policies and processes
+      %span.count
+        (
+        = @tasksPolicies.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @tasksPolicies.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.ttitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Integration Tools MINT
+      %span.count
+        (
+        = @tasksMINT.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @tasksMINT.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.ttitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Core
+      %span.count
+        (
+        = @tasksCore.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @tasksCore.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.ttitle, item
+
+
