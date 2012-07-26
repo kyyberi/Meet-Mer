@@ -2,8 +2,18 @@ class BugsController < ApplicationController
   # GET /bugs
   # GET /bugs.json
   def index
-    @bugs = Bug.all
-    @bugs = Bug.find(:all, :order => 'bpriority ASC, bseverity')
+    @bugs = Bug.find(:all, :order => 'updated_at DESC')
+    @bugsbydate = Bug.find(:all, :order => 'bpriority ASC, bseverity')
+    @bugsQA = Bug.find(:all, :conditions => {:bproduct => "Mer QA"})
+    @bugsVendorInterface = Bug.find(:all, :conditions => {:bproduct => "Mer Vendor Interface"})
+    @bugsPolicies = Bug.find(:all, :conditions => {:bproduct => "Mer Policies and Processes"})
+    @bugsMINT = Bug.find(:all, :conditions => {:bproduct => "Mer Integration Tools  MINT"})
+    @bugsCore = Bug.find(:all, :conditions => {:bproduct => "Mer Core"})
+    @bugsCrosshelpers = Bug.find(:all, :conditions => {:bproduct => "Mer Crosshelpers"})
+    @bugstypes = Bug.select(:bproduct).uniq
+    # not implemented at database level. Community has planned some kind of keyword to identify
+    # low hanging fruits.[25.7.2012] 
+    @bugsBananas = Bug.find(:all, :conditions => {:bproduct => "Easy"})
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @bugs }

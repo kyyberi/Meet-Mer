@@ -21,6 +21,9 @@ require 'mysql'
 require 'date'
 require 'htmlentities'
 
+require 'openssl'
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
 ###### Needed URLs
 task_list_atom = "https://bugs.merproject.org/buglist.cgi?bug_severity=task&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&email1=not-taken%40&emailassigned_to1=1&emailtype1=substring&query_format=advanced&title=Bug%20List&ctype=atom"
 

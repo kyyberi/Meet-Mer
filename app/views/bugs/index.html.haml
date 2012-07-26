@@ -7,7 +7,7 @@
     )
 #leftcolumnwrap
   #leftcolumn
-
+    = render 'accordion'
 .intro
   %h2.content 
     Bugs - contribute by solving bugs
@@ -17,7 +17,14 @@
 .intro
   %h2.content 
     Not taken bugs - pick one
-     
+  %p
+    On the left column, you'll find tasks divided into categories: 
+    %ul
+      %li Low hanging fruits (takes only a few minutes to do)
+      - @bugstypes.each do |category|       
+        %li 
+          = category.bproduct
+   
   %p 
     Below you'll find all not taken bugs 
     %span
