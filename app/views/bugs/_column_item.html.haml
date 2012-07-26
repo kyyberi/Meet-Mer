@@ -14,7 +14,8 @@
     %ul.column
       - @bugs.each do |item|
         - if name == item.bproduct
-          %li
+          %li.bug
+            %div{:class => [item.bseverity, 'severity']}
             %div.date
               = item.updated_at
               %div.title
