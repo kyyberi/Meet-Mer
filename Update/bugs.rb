@@ -18,10 +18,12 @@ require 'open-uri'
 require 'mysql'
 require 'date'
 require 'htmlentities'
+require 'openssl'
+# FIXME: ruby 1.9.1 will give error for CERT if this is not set
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 ###### Needed URLs
 not_taken_bugs_atom = "https://bugs.merproject.org/buglist.cgi?bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=trivial&bug_severity=enhancement&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&email1=not-taken%40&emailassigned_to1=1&emailtype1=substring&query_format=advanced&title=Bug%20List&ctype=atom"
-task_list_atom = "https://bugs.merproject.org/buglist.cgi?bug_severity=task&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&email1=not-taken%40&emailassigned_to1=1&emailtype1=substring&query_format=advanced&title=Bug%20List&ctype=atom"
 
 
 ###### take needed inputs from user
@@ -83,32 +85,33 @@ def getBugsNotTaken(atomurl)
         #	&lt;td&gt;2012-01-25&lt;/td&gt;
     	#	...	
 	#</summary>
-		btitle = strCleanUp(String(node.xpath('xmlns:title').inner_text))
-		@arr_node.push(btitle)
-	
+		# title special chars escaped at insert
+		btitle = node.xpath('xmlns:title').inner_text
+		# ttitle = strCleanUp(String(node.xpath('xmlns:title').inner_text))
 	        blink = node.xpath('xmlns:link').attr('href')
-	        @arr_node.push(blink)
-	
-	        bauthor = strCleanUp(String(node.xpath('xmlns:author/xmlns:name').inner_text))
-	        @arr_node.push(bauthor)
-
-	        bupdated = node.xpath('xmlns:updated').inner_text
-	        @arr_node.push(bupdated)
-
+		bauthor = strCleanUp(String(node.xpath('xmlns:author/xmlns:name').inner_text))
+		bupdated = node.xpath('xmlns:updated').inner_text
 		createdhtml = node.xpath('xmlns:summary').inner_text
-		# parse html with nokogiri and get created at value
+		# parse html with nokogiri and get values
 		html = Nokogiri::HTML(HTMLEntities.new.decode(createdhtml))
 		created = html.xpath('//td[. = "Creation date"]/following-sibling::td').inner_text
 		severity = html.xpath('//td[. = "Severity "]/following-sibling::td').inner_text	
-		priority = html.xpath('//td[. = "Priority"]/following-sibling::td').inner_text		
+		priority = html.xpath('//td[. = "Priority"]/following-sibling::td').inner_text	
+		product = strCleanUp(String(html.xpath('//td[. = "Product"]/following-sibling::td').inner_text))
+
+		# Need to get
+		# ttitle, tlink, tauthor, tproduct, tseverity, tpriority, tstatus, updated_at, created_at	
+		@arr_node.push(btitle)
+		@arr_node.push(blink)
+		@arr_node.push(bauthor)		
+		@arr_node.push(product)	
 		@arr_node.push(severity)	
-		@arr_node.push(priority)	
-		@arr_node.push(created)	
-
+		@arr_node.push(priority)
 		@arr_node.push('new')		
-
+		@arr_node.push(bupdated)
+		@arr_node.push(created)	
+		# Push to main array
 		@arr_not_taken.push(@arr_node)
-		
 		
 	end
 	return @arr_not_taken
@@ -139,8 +142,12 @@ def getNew(db_results, arr_not_taken)
 		@dbArrItem.push(h['btitle'])
 		@dbArrItem.push(h['blink'])
 		@dbArrItem.push(h['bauthor'])
-		@dbArrItem.push(h['bupdated'])
+		@dbArrItem.push(h['bproduct'])
+		@dbArrItem.push(h['bseverity'])
+		@dbArrItem.push(h['bpriority'])
 		@dbArrItem.push(h['bstatus'])
+		@dbArrItem.push(h['updated_at'])
+		@dbArrItem.push(h['created_at'])
 		
 		@dbArr.push(@dbArrItem)		
 	} 
@@ -160,11 +167,16 @@ end
 ### BEGIN UPDATE 
 ###################################################
 
+columns = "btitle, blink, bauthor, bproduct, bseverity, bpriority, bstatus, updated_at, created_at"
+querystr = "select " 
+querystr += columns
+querystr+= " from bugs"
+
 # First connect to database and select existing meetings from there
 con = Mysql.new('localhost', username, passwd, database)
 ### If passwordless access allowed use:
 #con = Mysql.new('localhost', '', '', database)  
-db_results = con.query('select btitle,blink,bauthor,updated_at,bstatus from bugs')
+db_results = con.query(querystr)
 con.close # could be left open put prefer to close if not needed. 
 
 # get list of new links
@@ -180,37 +192,44 @@ con = Mysql.new('localhost', username, passwd, database)
 db = con.query('TRUNCATE TABLE bugs')
 
 # Constant input start
-columns = "INSERT INTO bugs (btitle, blink,"
-columns += "bauthor, bseverity, updated_at, bpriority, created_at, bstatus) " 
+newquery = "INSERT INTO bugs (" + columns + ") " 
 # construct values
 @arrNotTaken.each do |bug|
-values = "VALUES ('"
-values += bug[0] # title
-values += "','"
-values += bug[1] # url
-values += "','"
-values += bug[2] # name
-values += "','"
-values += bug[4] # severity
-values += "','"
-values += bug[3] # updated
-values += "','"
-values += bug[5] # priority
-values += "','"
-values += bug[6] # created
-values += "','"
-values += bug[7] # status
-values += "')"
-# ' Bug 416  Mer contribution should not require an OBS  in order to build','https://bugs.merproject.org/show_bug.cgi?id=416','Carsten Munk','normal','2012-07-09T11:23:42Z','Low','2012-07-07','new')
+		values = "VALUES ('"
+		# Below, need to sanitize. Could use also http://api.rubyonrails.org/classes/ActiveRecord/Sanitization/ClassMethods.html
+		# but that requires yet another include, use database connection functions instead.  
+		values += con.escape_string(bug[0]) # btitle
+		values += "','"
+		values += bug[1] # blink
+		values += "','"
+		values += con.escape_string(bug[2]) # bauthor
+		values += "','"
+		values += con.escape_string(bug[3]) # bproduct
+		values += "','"
+		values += bug[4] # bseverity
+		values += "','"
+		values += bug[5] # bpriority
+		values += "','"
+		values += bug[6] # bstatus
+		values += "','"
+		values += bug[7] # updated_at
+		values += "','"
+		values += bug[8] # created_at
+		values += "')"
+		insert = newquery
+		insert += values
+		# Will output something like:
+		# INSERT INTO bugs (btitle, blink, bauthor, bproduct, bseverity, bpriority, bstatus, updated_at, created_at) 
+		# VALUES ('[Bug 445] BFD (GNU Binutils) 2.22 assertion fail elf32-arm.c:12049', \
+                #         'https://bugs.merproject.org/show_bug.cgi?id=445','Marko Saukko', \
+   		#	  'Mer Core','normal','Low','new','2012-07-23T11:18:04Z','2012-07-19')
 
-insert = columns
-insert += values
 
-#puts insert
-# execute insert
-rs = con.query(insert)
+		# puts insert
+		# execute insert
+		rs = con.query(insert)
 end
 
 
-con.close # could be left open put prefer to close if not needed. 
+con.close # DONE
 
