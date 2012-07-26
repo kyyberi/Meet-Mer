@@ -11,7 +11,9 @@ class BugsController < ApplicationController
     @bugsCore = Bug.find(:all, :conditions => {:bproduct => "Mer Core"})
     @bugsCrosshelpers = Bug.find(:all, :conditions => {:bproduct => "Mer Crosshelpers"})
     @bugstypes = Bug.select(:bproduct).uniq
-    # not implemented at database level. Community has planned some kind of keyword to identify
+    @bugsseverities = Bug.select(:bseverity).uniq
+ 
+   # not implemented at database level. Community has planned some kind of keyword to identify
     # low hanging fruits.[25.7.2012] 
     @bugsBananas = Bug.find(:all, :conditions => {:bproduct => "Easy"})
     respond_to do |format|

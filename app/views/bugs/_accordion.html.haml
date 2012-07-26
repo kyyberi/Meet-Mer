@@ -10,6 +10,7 @@
           bugs
           and get involved. 
       %div{:id =>'chart_div'}
+      %div{:id =>'chart_div_stacked'}
     :javascript
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
@@ -46,6 +47,33 @@
       $(document).ready(function() {
         $('#chart_div').delay(1200).slideToggle("fast");
       });
+
+
+    :javascript
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Product', 	'Critical', 	'Major', 	'Normal', 	'trivial', 	'enhancement'],
+          ['Core',  	1000,      	400, 		0,		0],
+          ['Policies',  1170,      	460,		0,		0],
+          ['2006',  	660,       	1120,		0,		0],
+          ['2007',  	1030,      	540,		0,		0]
+        ]);
+
+        var options = {
+          title: 'Bugs by severity',
+          vAxis: {title: 'Category',  titleTextStyle: {color: 'red'}},
+          isStacked: true, 
+          legend: {position: 'none'}
+          
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_stacked'));
+        
+        chart.draw(data, options);
+      }
+    </script>
     .block  
       %p Easy tasks are listed under 'Low hanging fruits' (takes a few minutes)
          
