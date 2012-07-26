@@ -5,7 +5,7 @@
     .block
       %p 
         %strong 
-          Fixign bugs is easy way to contribute, just pick one of 
+          Fixing bugs is easy way to contribute, just pick one of 
           = @bugs.count
           bugs
           and get involved. 
@@ -16,25 +16,7 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'available'],
-          ['QA',     
-            #{@bugsQA.count}
-          ],
-          ['Mer Vendor interface',      
-            #{@bugsVendorInterface.count}
-          ],
-          ['Mer policies and processses',  
-            #{@bugsPolicies.count}
-          ],
-          ['Intergration Tools MINT', 
-            #{@bugsMINT.count}
-          ],
-          ['Mer Core',    
-            #{@bugsCore.count}
-          ],
-          ['Mer Crosshelpers',    
-            #{@bugsCrosshelpers.count}
-          ]
+        #{render(:partial => "chart_pie_item", :locals => {:tasks => @tasks, :types => @taskstypes})}  
         ]);
 
         var options = {
@@ -54,11 +36,12 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Product', 	'Critical', 	'Major', 	'Normal', 	'trivial', 	'enhancement'],
-          ['Core',  	1000,      	400, 		0,		0],
-          ['Policies',  1170,      	460,		0,		0],
-          ['2006',  	660,       	1120,		0,		0],
-          ['2007',  	1030,      	540,		0,		0]
+          ['Product', 		'Critical', 	'Major', 	'Normal', 	'Trivial', 	'Enhancement'],
+          ['QA',  		1000,      	400, 		0,		0, 		100],
+          ['Policies',  	1170,      	460,		0,		0,		400],
+          ['Integration tools',	200,	  	660,       	1120,		0,		300],
+          ['Core',  		1030,      	540,		0,		0,		300],
+          ['Crosshelpers',  	1030,      	540,		0,		0,		300]
         ]);
 
         var options = {
@@ -76,7 +59,6 @@
     </script>
     .block  
       %p Easy tasks are listed under 'Low hanging fruits' (takes a few minutes)
-         
       %br   
   %h2.acc_trigger
     %a{:href=>"#"} 
@@ -97,102 +79,8 @@
                 = item.updated_at
                 %div.title
                   = link_to item.btitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer QA
-      %span.count
-        (
-        = @bugsQA.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @bugsQA.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.btitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Vendor Interface
-      %span.count
-        (
-        = @bugsVendorInterface.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @bugsVendorInterface.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.btitle, item
+  - @bugstypes.each do |item|
+    = render :partial => 'column_item', :locals => {:bugs => @bugs, :name => item}
 
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Policies and processes
-      %span.count
-        (
-        = @bugsPolicies.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @bugsPolicies.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.btitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Integration Tools MINT
-      %span.count
-        (
-        = @bugsMINT.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @bugsMINT.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.btitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Core
-      %span.count
-        (
-        = @bugsCore.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @bugsCore.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.btitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Crosshelpers
-      %span.count
-        (
-        = @bugsCrosshelpers.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @bugsCrosshelpers.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.btitle, item
 
 

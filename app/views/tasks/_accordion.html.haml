@@ -15,22 +15,7 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'available'],
-          ['QA',     
-            #{@tasksQA.count}
-          ],
-          ['Mer Vendor interface',      
-            #{@tasksVendorInterface.count}
-          ],
-          ['Mer policies and processses',  
-            #{@tasksPolicies.count}
-          ],
-          ['Intergration Tools MINT', 
-            #{@tasksMINT.count}
-          ],
-          ['Mer Core',    
-            #{@tasksCore.count}
-          ]
+        #{render(:partial => "chart_pie_item", :locals => {:tasks => @tasks, :types => @taskstypes})}
         ]);
 
         var options = {
@@ -66,86 +51,5 @@
                 = item.updated_at
                 %div.title
                   = link_to item.ttitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer QA
-      %span.count
-        (
-        = @tasksQA.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @tasksQA.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.ttitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Vendor Interface
-      %span.count
-        (
-        = @tasksVendorInterface.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @tasksVendorInterface.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.ttitle, item
-
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Policies and processes
-      %span.count
-        (
-        = @tasksPolicies.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @tasksPolicies.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.ttitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Integration Tools MINT
-      %span.count
-        (
-        = @tasksMINT.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @tasksMINT.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.ttitle, item
-  %h2.acc_trigger
-    %a{:href=>"#"} 
-      Mer Core
-      %span.count
-        (
-        = @tasksCore.count
-        )
-  .acc_container
-    .block
-      %ul.column
-        - @tasksCore.each do |item|
-          %li
-            %div.date
-              = item.updated_at
-              %div.title
-                = link_to item.ttitle, item
-
-
+  - @taskstypes.each do |item|
+    = render :partial => 'column_item', :locals => {:tasks => @tasks, :name => item}

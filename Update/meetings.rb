@@ -251,13 +251,13 @@ if @newLinks.length > 0
 			cmd = "\""
 			cmd += insert
 			cmd += "\""
-			puts cmd
+			# puts cmd
 			rs = con.query(insert)  	
 		end
 	end
 	con.close # could be left open put prefer to close if not needed. 
 else
-	puts "Nothing to do, exiting"
+	puts "Meetings - Nothing to do, exiting"
 	abort
 end
 # execute queries

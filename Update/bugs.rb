@@ -7,7 +7,8 @@
 # - Script will erase all bugs from table, since retrieved 
 # bugs are all 'not taken' status bugs. It's easier to 
 # clear all and input all bugs info again than iterate
-# all existing first and then add missing bugs 
+# all existing first and then add missing bugs and
+# update existing ones.
 #
 # Author: Jarkko (kyyberi) Moilanen
 # Email: jarkko@want3d.fi
@@ -185,6 +186,7 @@ con.close # could be left open put prefer to close if not needed.
 # Compare existing and new and get difference. FIXME: Not working
 @newNotTaken = getNew(db_results, @arr_not_taken)
 
+
 # clear all from database
 con = Mysql.new('localhost', username, passwd, database)
 ### If passwordless access allowed use:
@@ -227,8 +229,19 @@ newquery = "INSERT INTO bugs (" + columns + ") "
 
 		# puts insert
 		# execute insert
-		rs = con.query(insert)
+		 rs = con.query(insert)
 end
+
+# Update statistics
+puts "Update stats"
+rs = con.query('SELECT * FROM bugs')
+rs.each_hash do |row|
+puts "---"
+  row.each_pair do |k, v|
+    puts "column #{k} contains #{v}"
+  end
+end
+
 
 
 con.close # DONE

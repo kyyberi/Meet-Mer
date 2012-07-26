@@ -1,0 +1,21 @@
+%h2.acc_trigger
+  %a{:href=>"#"} 
+    = name
+    %span.count
+      (
+      - i = 0
+      - @tasks.each do |item|
+        - if name == item.tproduct
+          - i += 1 
+      = i
+      )
+.acc_container
+  .block
+    %ul.column
+      - @tasks.each do |item|
+        - if name == item.tproduct
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.ttitle, item

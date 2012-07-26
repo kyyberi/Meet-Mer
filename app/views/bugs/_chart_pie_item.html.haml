@@ -1,0 +1,22 @@
+['task', 'available'], 
+- j = 0
+- typecount = @bugstypes.count
+
+- @bugstypes.each do |item|
+  - i = 0
+  - j += 1
+  - line = "['"
+  - line += item 
+  - line += "',"
+  
+  - @bugs.each do |bug|
+    - if bug.bproduct == item
+      - i += 1
+  - line += String(i)
+  - if j < @bugstypes.count
+    - line += "],"
+  - else
+    - line += "]" 
+  = line 
+  
+

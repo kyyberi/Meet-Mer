@@ -1,0 +1,198 @@
+.container
+  %h2.acc_trigger
+    %a{:href=>"#"} Bugs info
+  .acc_container
+    .block
+      %p 
+        %strong 
+          Fixign bugs is easy way to contribute, just pick one of 
+          = @bugs.count
+          bugs
+          and get involved. 
+      %div{:id =>'chart_div'}
+      %div{:id =>'chart_div_stacked'}
+    :javascript
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'available'],
+          ['QA',     
+            #{@bugsQA.count}
+          ],
+          ['Mer Vendor interface',      
+            #{@bugsVendorInterface.count}
+          ],
+          ['Mer policies and processses',  
+            #{@bugsPolicies.count}
+          ],
+          ['Intergration Tools MINT', 
+            #{@bugsMINT.count}
+          ],
+          ['Mer Core',    
+            #{@bugsCore.count}
+          ],
+          ['Mer Crosshelpers',    
+            #{@bugsCrosshelpers.count}
+          ]
+        ]);
+
+        var options = {
+          title: "Tasks by gategories", is3D: false, colors:['#3161b6','#0a74ac', '#6f6f6f', '#67b7fc', '#1c4867', '#2f7055'], legend: {position: 'left', textStyle: {color: '#000', fontSize: 10}}, chartArea:{left:20,top:10,width:"60%",height:"70%"} 
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    :javascript
+      $(document).ready(function() {
+        $('#chart_div').delay(1200).slideToggle("fast");
+      });
+
+
+    :javascript
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Product', 		'Critical', 	'Major', 	'Normal', 	'Trivial', 	'Enhancement'],
+          ['QA',  		1000,      	400, 		0,		0, 		100],
+          ['Policies',  	1170,      	460,		0,		0,		400],
+          ['Integration tools',	200,	  	660,       	1120,		0,		300],
+          ['Core',  		1030,      	540,		0,		0,		300],
+          ['Crosshelpers',  	1030,      	540,		0,		0,		300]
+        ]);
+
+        var options = {
+          title: 'Bugs by severity',
+          vAxis: {title: 'Category',  titleTextStyle: {color: 'red'}},
+          isStacked: true, 
+          legend: {position: 'none'}
+          
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_stacked'));
+        
+        chart.draw(data, options);
+      }
+    </script>
+    .block  
+      %p Easy tasks are listed under 'Low hanging fruits' (takes a few minutes)
+      %br   
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Low hanging fruits
+      %span.count
+        (
+        = @bugsBananas.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - if @bugsBananas.count == 0
+          %li Yay! None found
+        - else
+          - @bugsBananas.each do |item|
+            %li
+              %div.date
+                = item.updated_at
+                %div.title
+                  = link_to item.btitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer QA
+      %span.count
+        (
+        = @bugsQA.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @bugsQA.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.btitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Vendor Interface
+      %span.count
+        (
+        = @bugsVendorInterface.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @bugsVendorInterface.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.btitle, item
+
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Policies and processes
+      %span.count
+        (
+        = @bugsPolicies.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @bugsPolicies.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.btitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Integration Tools MINT
+      %span.count
+        (
+        = @bugsMINT.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @bugsMINT.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.btitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Core
+      %span.count
+        (
+        = @bugsCore.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @bugsCore.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.btitle, item
+  %h2.acc_trigger
+    %a{:href=>"#"} 
+      Mer Crosshelpers
+      %span.count
+        (
+        = @bugsCrosshelpers.count
+        )
+  .acc_container
+    .block
+      %ul.column
+        - @bugsCrosshelpers.each do |item|
+          %li
+            %div.date
+              = item.updated_at
+              %div.title
+                = link_to item.btitle, item
+
+

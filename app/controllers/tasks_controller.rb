@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     @tasksPolicies = Task.find(:all, :conditions => {:tproduct => "Mer Policies and Processes"})
     @tasksMINT = Task.find(:all, :conditions => {:tproduct => "Mer Integration Tools  MINT"})
     @tasksCore = Task.find(:all, :conditions => {:tproduct => "Mer Core"})
-    @taskstypes = Task.select(:tproduct).uniq
+    @taskstypes = Task.uniq.pluck(:tproduct)
     # not implemented at database level. Community has planned some kind of keyword to identify
     # low hanging fruits.[25.7.2012] 
     @tasksBananas = Task.find(:all, :conditions => {:tproduct => "Easy"})

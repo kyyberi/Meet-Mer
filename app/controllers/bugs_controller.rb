@@ -10,7 +10,7 @@ class BugsController < ApplicationController
     @bugsMINT = Bug.find(:all, :conditions => {:bproduct => "Mer Integration Tools  MINT"})
     @bugsCore = Bug.find(:all, :conditions => {:bproduct => "Mer Core"})
     @bugsCrosshelpers = Bug.find(:all, :conditions => {:bproduct => "Mer Crosshelpers"})
-    @bugstypes = Bug.select(:bproduct).uniq
+    @bugstypes = Bug.uniq.pluck(:bproduct)
     @bugsseverities = Bug.select(:bseverity).uniq
  
    # not implemented at database level. Community has planned some kind of keyword to identify

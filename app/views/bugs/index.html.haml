@@ -13,6 +13,7 @@
     Bugs - contribute by solving bugs
     = render 'layouts/shared/sharebuttons'
   %p More about bugs .... Perhaps something about process...
+  
 
 .intro
   %h2.content 
@@ -23,7 +24,7 @@
       %li Low hanging fruits (takes only a few minutes to do)
       - @bugstypes.each do |category|       
         %li 
-          = category.bproduct
+          = category
    
   %p 
     Below you'll find all not taken bugs 

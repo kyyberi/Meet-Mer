@@ -1,0 +1,23 @@
+['task', 'available'], 
+- j = 0
+- typecount = @taskstypes.count
+
+- @taskstypes.each do |item|
+  - i = 0
+  - j += 1
+  - line = "['"
+  - line += item 
+  - line += "',"
+  
+  - @tasks.each do |task|
+    - if task.tproduct == item
+      - i += 1
+  - line += String(i)
+  - if j < @taskstypes.count
+    - line += "],"
+  - else
+    - line += "]" 
+  = line 
+  
+
+
