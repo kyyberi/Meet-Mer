@@ -233,14 +233,14 @@ newquery = "INSERT INTO bugs (" + columns + ") "
 end
 
 # Update statistics
-puts "Update stats"
-rs = con.query('SELECT * FROM bugs')
-rs.each_hash do |row|
-puts "---"
-  row.each_pair do |k, v|
-    puts "column #{k} contains #{v}"
-  end
-end
+#puts "Update stats"
+#rs = con.query('SELECT * FROM bugs')
+#rs.each_hash do |row|
+#puts "---"
+#  row.each_pair do |k, v|
+#    puts "column #{k} contains #{v}"
+#  end
+#end
 
 
 

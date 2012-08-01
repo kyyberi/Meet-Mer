@@ -1,0 +1,15 @@
+= simple_form_for(@stat) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :stype
+    = f.input :sproduct
+    = f.input :sseverity
+    = f.input :scount
+    = f.input :spriority
+    = f.input :syear
+    = f.input :smonth
+    = f.input :sday
+
+  .form-actions
+    = f.button :submit

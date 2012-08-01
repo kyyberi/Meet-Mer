@@ -1,0 +1,33 @@
+%h1 Listing stats
+
+%table
+  %tr
+    %th Stype
+    %th Sproduct
+    %th Sseverity
+    %th Scount
+    %th Spriority
+    %th Syear
+    %th Smonth
+    %th Sday
+    %th
+    %th
+    %th
+
+  - @stats.each do |stat|
+    %tr
+      %td= stat.stype
+      %td= stat.sproduct
+      %td= stat.sseverity
+      %td= stat.scount
+      %td= stat.spriority
+      %td= stat.syear
+      %td= stat.smonth
+      %td= stat.sday
+      %td= link_to 'Show', stat
+      %td= link_to 'Edit', edit_stat_path(stat)
+      %td= link_to 'Destroy', stat, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Stat', new_stat_path

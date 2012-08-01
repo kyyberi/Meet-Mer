@@ -1,4 +1,6 @@
 Rails3BootstrapDeviseCancan::Application.routes.draw do
+  resources :stats
+
   resources :tasks
 
   resources :bugs

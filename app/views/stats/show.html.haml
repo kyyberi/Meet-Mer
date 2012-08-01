@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Stype:
+  = @stat.stype
+%p
+  %b Sproduct:
+  = @stat.sproduct
+%p
+  %b Sseverity:
+  = @stat.sseverity
+%p
+  %b Scount:
+  = @stat.scount
+%p
+  %b Spriority:
+  = @stat.spriority
+%p
+  %b Syear:
+  = @stat.syear
+%p
+  %b Smonth:
+  = @stat.smonth
+%p
+  %b Sday:
+  = @stat.sday
+
+= link_to 'Edit', edit_stat_path(@stat)
+\|
+= link_to 'Back', stats_path

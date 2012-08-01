@@ -10,9 +10,16 @@
     = render 'accordion'
 .intro
   %h2.content 
-    Bugs - contribute by solving bugs
+    Contribute by solving bugs
     = render 'layouts/shared/sharebuttons'
-  %p More about bugs .... Perhaps something about process...
+  %p A software bug is the common term used to describe an error, flaw, mistake, failure, or fault in a computer program or system that produces an incorrect or unexpected result, or causes it to behave in unintended ways. Most bugs arise from mistakes and errors made by people in either a program's source code or its design, and a few are caused by compilers producing incorrect code. Mer is no exception - it has bugs (in software, processes, integration tools, etc)
+  %h3 Let me help! How to select a bug to solve?
+  %p 
+    Some bugs are more 'serious' than others. Picking random bug to solve might not be the most fruitful method. We suggest a moderate path:
+    %ol
+      %li Instead you should first evaluate your skills. To ease selection of bugs for beginners, we have listed 'low hanging fruits' separately. Those bugs are considered to be easy(-ish) to solve and normally takes minutes of your time. 
+      %li Once you get more familiar with Mer, you might feel more comfortable with harder bugs. 
+  %p If in doubt, talk to people in IRC (channel: #mer in freenode). 
   
 
 .intro
@@ -21,7 +28,7 @@
   %p
     On the left column, you'll find tasks divided into categories: 
     %ul
-      %li Low hanging fruits (takes only a few minutes to do)
+      %li Low hanging fruits (takes only a few minutes to solve)
       - @bugstypes.each do |category|       
         %li 
           = category

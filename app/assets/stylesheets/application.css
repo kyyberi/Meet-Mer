@@ -436,3 +436,50 @@ span.count {
 	float:right;
 	height:30px;
 }
+
+.bug .normal {
+	width:40px;
+        height:15px;
+        float:right;
+	background-image:url('normal.png'); 
+}
+
+.bug .critical {
+	width:40px;
+        height:15px;
+        float:right;
+	background-image:url('critical.png'); 
+}
+
+.bug .enhancement {
+	width:40px;
+        height:15px;
+        float:right;
+	background-image:url('enhancement.png'); 
+}
+.bug .major {
+	width:40px;
+        height:15px;
+        float:right;
+	background-image:url('major.png'); 
+}
+
+.bug .trivial {
+	width:40px;
+        height:15px;
+        float:right;
+	background-image:url('trivial.png'); 
+}
+
+ol {
+	margin-left:30px;
+	margin-bottom:20px;
+	margin-top:10px;
+}
+
+ol li{
+	line-height:1.5em;
+	list-style-type: decimal;
+	list-style-position: inside;
+	margin-top:10px;
+}
