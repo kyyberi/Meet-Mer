@@ -9,32 +9,38 @@
 #leftcolumnwrap
   #leftcolumn
     = render "accordion"
-.intro
+
+%div{:class => 'intro meeting'}
   %h2.content
     = @meeting.title
     = render 'layouts/shared/sharebuttons'
-  %p
-    %b Date:
-    = @meeting.meetingdate
-  %p
-    %b Started:
-    = @meeting.startTime
-  %p
-    %b Ended:
-    = @meeting.endTime
-  %p
-    %b Meeting discussion:
-    = link_to 'Read discussion', @meeting.logsurl, {:rel => 'shadowbox;width=1000;height=600;', :title => [@meeting.channel," - " ,@meeting.title]} 
-  %p
-    %b Meeting Minutes:
-    = link_to 'Read minutes', @meeting.murl, {:rel => 'shadowbox;width=1000;height=600;', :title => [@meeting.channel," - " ,@meeting.title]}
-  %p
-    %b Channel:
-    = @meeting.channel
-.intro
-  %p 
-    = render "content", :locals => { :meeting => @meeting }
+  .grouptime
+    .meetingdetail_date
+      %span.item Date
+      %span.value
+        = @meeting.meetingdate
+      %span.item Started
+      %span.value
+      = @meeting.startTime
+      %span.item Ended
+      %span.value
+      = @meeting.endTime
+      %span.item Meeting discussion
+      %li
+        = link_to 'Open discussion', @meeting.logsurl, {:rel => 'shadowbox;width=1000;height=600;', :title => [@meeting.channel," - " ,@meeting.title]}
+      %span.item Meeting Minutes
+      %li
+        = link_to 'Open minutes', @meeting.murl, {:rel => 'shadowbox;width=1000;height=600;', :title => [@meeting.channel," - " ,@meeting.title]}
 
-  = link_to 'Edit', edit_meeting_path(@meeting)
-  \|
+    .meetingdetail_channel
+      %span.item Channel
+      %span.value
+      = @meeting.channel
+      %li.btn
+        %a{:href => "http://webchat.freenode.net/?channels=mer-meeting", :target => "top"} open channel in new window
+      %li.btn 
+        %a{:href =>'http://webchat.freenode.net/?channels=mer-meeting', :rel => 'shadowbox;width=1000;height=600;', :title => @meeting.channel} open channel in floating div
+    
+  /= link_to 'Edit', edit_meeting_path(@meeting)
+  /\| 
   = link_to 'Back', meetings_path

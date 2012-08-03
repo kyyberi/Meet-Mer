@@ -26,3 +26,4 @@ gem "therubyracer", :group => :assets, :platform => :ruby
 gem "simple-navigation"
 gem "feedzirra"
 gem "htmlentities"
+gem "friendly_id", "~> 4.0.1"
